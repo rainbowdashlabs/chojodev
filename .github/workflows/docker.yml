@@ -24,7 +24,7 @@ jobs:
           docker image tag ghcr.io/${{ github.repository }}:${{ github.sha }} ghcr.io/${{ github.repository }}:${{ github.ref_name }}
           docker push ghcr.io/${{ github.repository }}:${{ github.ref_name }}
       - name: Tag & Push latest image
-        if: github.ref_name == 'master'
+        if: github.ref_name == 'main'
         run: |
           docker image tag ghcr.io/${{ github.repository }}:${{ github.sha }} ghcr.io/${{ github.repository }}:latest
           docker push ghcr.io/${{ github.repository }}:latest
