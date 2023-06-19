@@ -1,0 +1,71 @@
+site_name: Chojo - Portfolio
+site_url: https://chojo.dev/
+site_description: Chojo - Portfolio
+repo_url: https://github.com/rainbowdashlabs/chojodev/
+repo_name: Chojo
+docs_dir: /docs/docs
+site_dir: /docs/site
+plugins:
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: true
+nav:
+  - Home: index.md
+  - 'About me':
+      - about_me/index.md
+      - 'Languages': about_me/about_me.md
+  - 'Minecraft':
+      - minecraft/index.md
+      - 'Eldoria': minecraft/eldoria.md
+      - 'Big Doors Opener': minecraft/big_doors_opener.md
+      - 'Blood Night': minecraft/blood_night.md
+      - 'Companies': minecraft/companies.md
+      - 'Schematic Brush Reborn': minecraft/schematic_brush_reborn.md
+  - 'Discord':
+      - discord/index.md
+      - 'Reputation Bot': discord/reputation_bot.md
+      - 'Lyna': discord/lyna.md
+  - 'Libraries':
+      - libraries/index.md
+      - 'SADU': libraries/sadu.md
+      - 'Universalis Java': libraries/universalis_java.md
+      - 'Jackson Bukkit': libraries/jackson_bukkit.md
+  - 'More':
+      - more/index.md
+      - 'Sql Java Tutorial': more/sql_java.md
+
+theme:
+  features:
+    - navigation.instant
+    - navigation.tracking
+    # - navigation.expand
+    - navigation.tabs
+    - navigation.tabs.sticky
+    # - navigation.sections
+    # - navigation.indexes
+    - navigation.top
+    - content.code.annotate
+  language: en
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: pink
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: light blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
