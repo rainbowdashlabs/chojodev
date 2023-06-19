@@ -3,8 +3,8 @@ site_url: https://chojo.dev/
 site_description: Chojo - Portfolio
 repo_url: https://github.com/rainbowdashlabs/chojodev/
 repo_name: Chojo
-docs_dir: /docs/docs
-site_dir: /docs/site
+docs_dir: docs
+site_dir: site
 plugins:
   - git-revision-date-localized:
       type: date
