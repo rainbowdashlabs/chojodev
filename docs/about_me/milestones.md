@@ -146,7 +146,7 @@ I chose the way of least effort and applied at the big burger company with the g
 I got accepted.
 I didn't know I would spend the next 2,5 years there and completely ruin my private life and sleep schedule.
 
-## 2017 - The first game
+## 2017 - The first game aka Mixed up tales
 Every semester had project weeks at the end of the semester.
 Groups were formed which then developed games.
 You then work on the game for 3 or 6 weeks on that project.
@@ -154,8 +154,12 @@ Preferable 5 full days per week.
 For me that meant 9-17 at the university and two 4-hour shifts (18-22) during the week and one during the weekend normally.
 My first game was a hot seat card game in unity.
 It turned out to be quite some fun and even the game itself was quite bug free.
-Sadly I don't have a video of it anymore :c
-I also 
+The general idea was to use fairy tale characters to make a card game. 
+Every character has their own ability and effect on the field.
+
+> Gameplay: [Youtube](https://www.youtube.com/watch?v=GqRVcNSVgyo)
+
+
 
 ## 2018 - Time of AI
 It ain't much, but the AI module was probably the most interesting.

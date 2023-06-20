@@ -1,8 +1,8 @@
 site_name: Chojo - Portfolio
 site_url: https://chojo.dev/
-site_description: Chojo - Portfolio
+site_description: Welcome to my portfolio page.
 repo_url: https://github.com/rainbowdashlabs/chojodev/
-repo_name: Chojo
+repo_name: chojo.dev
 docs_dir: docs
 site_dir: site
 plugins:
@@ -48,6 +48,8 @@ theme:
     # - navigation.indexes
     - navigation.top
     - content.code.annotate
+    - navigation.indexes
+    - toc.follow
   language: en
   name: material
   palette:
@@ -71,3 +73,17 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+extra:
+  social:
+    - name: Patreon
+      icon: fontawesome/brands/patreon
+      link: https://www.patreon.com/eldoriaplugins
+    - name: Spigot
+      icon: material/minecraft
+      link: https://www.spigotmc.org/resources/authors/585216/
+    - name: Github
+      icon: fontawesome/brands/github
+      link: https://github.com/rainbowdashlabs
+    - name: Discord
+      icon: fontawesome/brands/discord
+      link: https://discord.gg/7Z74AjhRXg
