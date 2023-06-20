@@ -153,4 +153,3 @@ Of course there is other software I work or worked with, which I will just list 
 | [Confluence](https://www.atlassian.com/en/software/confluence) | ★★★★⯪      |
 | [Unity till 2019](https://unity.com/)                          | ★★★☆☆      |
 | [Unreal Engine 4 till 2019]()                                  | ★★☆☆☆      |
-| []()                                                           | ★★★★⯪      |
