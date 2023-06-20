@@ -253,7 +253,7 @@ It was quite interesting.
 However, I got sick for two weeks and couldn't work on it which added two weeks on my due date.
 This made me exceed the regular 7 semester time and I officially got my bachelor degree one week into the 8. semester.
 
-## 2020 Feburary - Graduation and Covid
+## 2020 Feb - Graduation and Covid
 The day when I turned in my bachelor thesis was the friday before the lockdown was announced in Germany.
 So I had my thesis presentation online and also got my bachelor degree via post.
 No fancy graduation party and stuff.
@@ -268,7 +268,7 @@ And the first one I wrote was [schematic brush reborn](https://github.com/eldori
 Basically a rewrite of an older version of it.
 I did a lot of mistakes there and also adapted mistakes of the previous developer of the plugin.
 
-## 2020 October - My first real job
+## 2020 Oct - My first real job
 In september my time as a working student was officially over.
 Luckily I got offered a permanent emploment as a backend developer, since they liked my work as a working student.
 So I stayed at the company where I once started as an intern, now as a real backend developer.
@@ -285,7 +285,7 @@ And since I like pain and suffering I went for an arch distro.
 Since that day I never stopped using linux, but I tried different arch distros.
 That was also a preparation to finally manage my server myself, since a friend did this for me so far.
 
-## 2021 December - First premium plugin release
+## 2021 Dec - First premium plugin release
 Out of schematic brush reborn my first [premium plugin](https://www.spigotmc.org/resources/98499/) on spigot was born.
 After nearly 1.5 years I finally felt comfortable to request money for my work.
 
