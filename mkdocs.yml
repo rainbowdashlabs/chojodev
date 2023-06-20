@@ -14,7 +14,8 @@ nav:
   - Home: index.md
   - 'About me':
       - about_me/index.md
-      - 'Languages': about_me/about_me.md
+      - 'My Story': about_me/my_story.md
+      - 'Languages': about_me/languages.md
   - 'Minecraft':
       - minecraft/index.md
       - 'Eldoria': minecraft/eldoria.md
