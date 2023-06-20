@@ -2,7 +2,8 @@
 
 You probably came here to learn something about me. Well lets start it!
 
-A shorter list of my milestones can be found at my [milestone](./milestones.md) page.
+A shorter list of my milestones can be found at my [milestone](./milestones.md) page. (Probably not shorter but more 
+bullet point like)
 
 You want the long version? Here it is!
 
