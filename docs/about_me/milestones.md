@@ -1,3 +1,7 @@
+---
+summary: How I got where I am today.
+---
+
 # Milestones
 
 On this page you will find several milestones on my way to what I am today.
