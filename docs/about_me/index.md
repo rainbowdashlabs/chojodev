@@ -9,7 +9,7 @@ I mainly work on minecraft plugins published under my [Eldoria](https://github.c
 Feel free to check it out. 
 All my work is open source since I think it is important to share knowledge and skills. 
 I also created a bunch of tutorials, which teach you how to work with databases.
-Check it out on my [repositories](https://github.com/rainbowdashlabs?tab=repositories.
+Check it out on my [repositories](https://github.com/rainbowdashlabs?tab=repositories).
 
 
 If you are looking for a long story take a look at my [about me](my_story.md).
