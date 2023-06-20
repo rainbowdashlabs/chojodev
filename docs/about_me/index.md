@@ -15,3 +15,6 @@ Check it out on my [repositories](https://github.com/rainbowdashlabs?tab=reposit
 If you are looking for a long story take a look at my [about me](my_story.md).
 An overview about the [technologies](technologies.md) I use can be found here as well.
 I also compiled a small list of [milestones](milestones.md).
+
+If you want to contact me you can do this via mail(at)chojo.dev or via my
+[discord server](https://discord.gg/7Z74AjhRXg).

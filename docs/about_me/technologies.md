@@ -126,3 +126,31 @@ Since the minecraft ecosystem is very large in itself, this deserves an extra ar
 | [World Guard](https://github.com/EngineHub/WorldGuard)                           | ★★★⯪☆      |
 | [ProtocolLib](https://github.com/dmulloy2/ProtocolLib/)                          | ★★★☆☆      |
 | [Adventure / Mini Messages](https://github.com/KyoriPowered/adventure)           | ★★★★⯪      |
+
+### Material for MkDocs
+
+**Confidence:** ★★★★⯪
+
+This is my goto software when I need to generate static pages, as you can see here.
+All my documentations and webpages are generated with this software.
+
+### GitHub (Workflows)
+
+**Confidence:** ★★★★⯪
+
+My whole deployment and development of my private project depends on GitHub and its workflows in combination with
+docker images.
+I use it heavily and could not live without it anymore
+
+### Other Software
+
+Of course there is other software I work or worked with, which I will just list here shortly:
+
+| Software                                                       | Confidence |
+|----------------------------------------------------------------|------------|
+| [JIRA](https://www.atlassian.com/en/software/jira)             | ★★★★⯪      |
+| [BitBucket/Pipelines](https://bitbucket.org/)                  | ★★★☆☆      |
+| [Confluence](https://www.atlassian.com/en/software/confluence) | ★★★★⯪      |
+| [Unity till 2019](https://unity.com/)                          | ★★★☆☆      |
+| [Unreal Engine 4 till 2019]()                                  | ★★☆☆☆      |
+| []()                                                           | ★★★★⯪      |
