@@ -12,7 +12,6 @@ RUN mkdocs build -f mkdocs.yml
 
 FROM nginx:alpine
 
-
 COPY --from=base /site /usr/share/nginx/html
 
 EXPOSE 80
