@@ -19,7 +19,9 @@ Be it [minecraft plugins](/minecraft) or [discord bots](/discord).
 
 I use various frameworks & libs. Some of them are listed here:
 
-<!-- ★ ⯪ ☆ -->
+<!-- ★ :material-star: -->
+<!-- ⯪ :material-star-half-full: -->
+<!-- ☆ :material-star-outline: -->
 
 | Framework/Library                                                              | Confidence |
 |--------------------------------------------------------------------------------|------------|
