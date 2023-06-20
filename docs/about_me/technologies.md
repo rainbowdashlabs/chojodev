@@ -46,6 +46,31 @@ I have several years of experience using it and know its strength and issues.
 I know the SQL standard quite well and have used it in many projects.
 I also know the difference between plain SQL which is used by SqLite and the SQL variant used by MySQL and MariaDB, which differn in the feature set as well.
 
+### Python
+
+**Confidence:** ★★★⯪☆
+
+Python is my main language when it comes to data analytic tasks and also data retrieval from external sources.
+
+I develop and maintain several applications using python, and I am fond with a good amount of frameworks.
+
+| Framework/Library                              | Confidence |
+|------------------------------------------------|------------|
+| [Pydantic](https://docs.pydantic.dev/latest/)  | ★★★⯪☆      |
+| [FastAPI](https://fastapi.tiangolo.com/)       | ★★★★☆      |
+| [Gunicorn](https://gunicorn.org/)              | ★★★★☆      |
+| [Numpy](https://numpy.org/)                    | ★★★⯪☆      |
+| [pandas](https://pandas.pydata.org/)           | ★★⯪☆☆      |
+| [aiohttp](https://docs.aiohttp.org/en/stable/) | ★★★⯪☆      |
+
+### NodeJs
+
+**Confidence:** ★★⯪☆☆
+
+I can say at least that I understand the concept of NodeJS.
+I wrote several smaller application with it.
+I also used it for quickly developing scripts before I switched to python
+
 ## Software
 
 Here is an incomplete list of software I use. The confidence here is mainly set on configuration of the software and
