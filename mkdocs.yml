@@ -16,7 +16,7 @@ nav:
       - about_me/index.md
       - 'My Story': about_me/my_story.md
       - 'Milestones': about_me/milestones.md
-      - 'Languages': about_me/languages.md
+      - 'Technologies': about_me/technologies.md
   - 'Minecraft':
       - minecraft/index.md
       - 'Eldoria': minecraft/eldoria.md
