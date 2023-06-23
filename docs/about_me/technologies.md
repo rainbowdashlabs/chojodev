@@ -4,7 +4,9 @@ summary: The technologies I use.
 
 # Technologies
 
-See what I know and what I use
+I use various tools and language for my projects.
+I compiled a list of my major technologies, tools and languages on this page.
+
 
 ## Languages
 
@@ -15,7 +17,7 @@ See what I know and what I use
 The main language for my private projects.
 Be it [minecraft plugins](/minecraft) or [discord bots](/discord).
 
-#### Technologies
+#### Framework and Libraries
 
 I use various frameworks & libs. Some of them are listed here:
 
@@ -96,11 +98,11 @@ I also realised several projects which support MariaDB/MySQL/SqLite and PostgreS
 
 **Confidence:** ★★★★☆
 
-I use docker for all my projects. Besides I use some larger frameworks for monitoring and maintaining my infrastructure.
+I use docker for all my projects. Besides I use some larger tools for monitoring and maintaining my infrastructure.
 
-#### Technologies
+#### Tools
 
-I use various tool in connection to docker. Some of them are listed here:
+I use various tools in connection to docker. Some of them are listed here:
 
 <!-- ★ ⯪ ☆ -->
 
