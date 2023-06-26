@@ -1,3 +1,0 @@
-# Schematic Brush Reborn
-
-

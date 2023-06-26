@@ -23,7 +23,12 @@ nav:
       - 'Big Doors Opener': minecraft/big_doors_opener.md
       - 'Blood Night': minecraft/blood_night.md
       - 'Companies': minecraft/companies.md
-      - 'Schematic Brush Reborn': minecraft/schematic_brush_reborn.md
+      - 'Schematic Brush Reborn':
+        - minecraft/schematic_brush_reborn/index.md
+        - 'Grid Selector': minecraft/schematic_brush_reborn/grid_selector.md
+        - 'Survival Schematic Brush': minecraft/schematic_brush_reborn/survival_schematic_brush.md
+        - 'Schematic Tools': minecraft/schematic_brush_reborn/schematic_tools.md
+        - 'Schematic Brush Database': minecraft/schematic_brush_reborn/schematic_brush_database.md
   - 'Discord':
       - discord/index.md
       - 'Reputation Bot': discord/reputation_bot.md
