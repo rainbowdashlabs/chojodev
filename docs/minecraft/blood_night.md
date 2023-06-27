@@ -1,5 +1,14 @@
 # Blood Night
 
+Blood Night aims to make minecraft nights harder again.
+Especially in the endgame, nights are not really challenging anymore.
+Blood Night adds custom mobs and makes night generally harder.  
+
+## Version 0
+
+**Links:** [Source Code](https://github.com/eldoriarpg/BloodNight), 
+[Spigot](https://www.spigotmc.org/resources/85095/)
+
 Blood Night started as an experiment.
 I wanted to check how hard it would be to create custom mobs in minecraft without using mobs or NMS.
 The result was a custom mob framework which allows easy addition of custom mobs via code.
@@ -23,5 +32,13 @@ To add custom mobs without code would require some way to code without coding. T
 A yaml file is still the worst way for me to configure large things, especially mobs.
 But I also lacked the knowledge to build a visual editor.
 
+## Version 1
+
+**Links:** [Source Code](https://github.com/eldoriarpg/blood-night), 
+[Spigot]() (Not yet)
+
 In 2023, I started working with some friends to rewrite blood night from scratch and also move all the configuration to a web editor.
 As of today this is still in progress and not finished.
+
+The goal for blood night v1 is an api first approach, as I did it with [schematic brush reborn v2](schematic_brush_reborn/index.md#version-2).
+Everything of the plugin should be configurable and extendable via the api.
