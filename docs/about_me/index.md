@@ -16,7 +16,7 @@ If you are looking for a long story take a look at my [about me](my_story.md).
 An overview about the [technologies](technologies.md) I use can be found here as well.
 I also compiled a small list of [milestones](milestones.md).
 
-If you want to contact me you can do this via `mail [at] chojo.dev` or via my Discord Server.
+If you want to contact me you can do this via `mail [at] chojo [dot] dev` or via my Discord Server.
 
 [![](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
 

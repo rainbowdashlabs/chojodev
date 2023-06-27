@@ -16,7 +16,7 @@ If you want to support my work consider subscribing on my [Patreon](https://www.
 
 Have fun exploring my little page c:
 
-If you want to contact me you can do this via `mail [at] chojo.dev` or via my Discord Server.
+If you want to contact me you can do this via `mail [at] chojo [dot] dev` or via my Discord Server.
 
 [![](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
 
