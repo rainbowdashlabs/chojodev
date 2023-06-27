@@ -16,4 +16,12 @@ If you want to support my work consider subscribing on my [Patreon](https://www.
 
 Have fun exploring my little page c:
 
+If you want to contact me you can do this via `mail [at] chojo.dev` or via my Discord Server.
+
+[![](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
+
+There is also a dedicated discord for my Minecraft plugins
+
+[![](https://discordapp.com/api/guilds/718502316940066927/widget.png?style=banner3)](https://discord.eldoria.de)
+
 

@@ -6,6 +6,11 @@ Some projects however are notable and have build up a surprisingly large userbas
 A few of my projects are also only available when purchased.
 They are still open source, but support is only provided to verified buyers.
 
+All my plugins are located under the [Eldoria](eldoria.md) organization.
+I created a server to provide support for my plugins:
+
+[![](https://discordapp.com/api/guilds/718502316940066927/widget.png?style=banner3)](https://discord.eldoria.de)
+
 ## Smaller Projects
 
 Those are some of my smaller projects.
