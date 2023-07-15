@@ -1,6 +1,6 @@
-FROM python:3.11
+FROM python:3.10
 
-RUN pip install mkdocs-material && pip install mkdocs-git-revision-date-localized-plugin
+RUN pip install pipenv
 
 EXPOSE 80
 
@@ -12,4 +12,8 @@ COPY docs/ docs/
 
 COPY .git/ .git/
 
-ENTRYPOINT ["mkdocs", "serve", "-a", "0.0.0.0:80"]
+COPY Pipfile Pipfile.lock /docs/
+
+RUN pipenv install
+
+ENTRYPOINT ["pipenv","run","mkdocs", "serve", "-a", "0.0.0.0:80"]

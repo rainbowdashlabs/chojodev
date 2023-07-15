@@ -10,8 +10,25 @@ plugins:
       type: date
       fallback_to_build_date: true
       enable_creation_date: true
+  - blog:
+      blog_toc: true
+      post_date_format: medium
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+  - rss:
+      match_path: blog/posts/.*
+      abstract_chars_count: 160  # -1 for full content
+      abstract_delimiter: <!-- more -->
+      date_from_meta:
+        as_creation: "date"
+        as_update: false
+        datetime_format: "%Y-%m-%d %H:%M"
+        default_timezone: Europe/Berlin
+
 nav:
   - Home: index.md
+  - Blog:
+      - blog/index.md
   - 'About me':
       - about_me/index.md
       - 'My Story': about_me/my_story.md
@@ -97,3 +114,6 @@ extra:
     - name: Discord
       icon: fontawesome/brands/discord
       link: https://discord.chojo.dev
+    - name: Blog RSS
+      icon: fontawesome/brands/discord
+      link: https://chojo.dev/feed_rss_created.xml
