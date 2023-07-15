@@ -115,5 +115,5 @@ extra:
       icon: fontawesome/brands/discord
       link: https://discord.chojo.dev
     - name: Blog RSS
-      icon: fontawesome/brands/discord
+      icon: fontawesome/solid/rss
       link: https://chojo.dev/feed_rss_created.xml
