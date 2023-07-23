@@ -15,6 +15,5 @@ RUN pipenv run mkdocs build -f mkdocs.yml
 FROM nginx:alpine
 
 COPY --from=base /site /usr/share/nginx/html
-COPY assets/ /usr/share/nginx/html/assets/
 
 EXPOSE 80
