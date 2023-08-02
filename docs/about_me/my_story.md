@@ -2,15 +2,15 @@
 
 You probably came here to learn something about me. Well lets start it!
 
-A shorter list of my milestones can be found at my [milestone](./milestones.md) page. (Probably not shorter but more 
-bullet point like)
+A shorter list of my milestones can be found at my [milestone](./milestones.md) page.
+(Probably not shorter but more bullet point like)
 
 You want the long version? Here it is!
 
 ### The earlies
 
 My first attempt with programming was with 16. 
-However, I didn’t really get into it and slowly crawled through the first 20 pages or so of a book for java 6, which I got from a friend.
+However, I didn't really get into it and slowly crawled through the first 20 pages or so of a book for java 6, which I got from a friend.
 After this I stopped and never touched it again.
 
 After finishing high school I wasn't really sure what to do in the future.
@@ -91,25 +91,29 @@ So I finished my bachelor and started working full time in the company where I s
 
 ### So how did I get here?
 
-1. A lot of private programming in my free time. Not related to my studies at all.\
-   In some weeks I spend 20 hours or more on programming of private projects. This practice allowed me to make a lot
-   of mistakes and just try stuff.
-2. Listen to people who know what they do.\
-   I was lucky and had some friends which were way more experienced than me. These friends told me when I was doing bad
-   stuff and also send me helpful links to documentations which taught me a lot of best practices.
-3. Ask when you have problems\
-   Programmers tend to just try until it works and often take the first working solution. Sadly this solution is often
-   not the best working solution
-4. Don’t trust YouTube\
-   Most YouTube videos are bad when it comes to programming for several reasons. Most motivated people are the newest
-   and don’t know what the best practise is. You can’t correct mistakes in videos and wrong videos are online for ages
-5. Use official sources\
-   If you have a problem with java read the java documentation. Same for python or your database. All these languages
-   and applications have very good documentation which will help you to improve your skills. There are also a lot of good
-   books out there which will help you to learn new languages or using databases
-6. Find a buddy for code review\
-   Find a friend. Ideally this friend is more experienced than you, but it can also be one with the same experience.
-   Review each other code and look for pitfalls or silly mistakes and discuss general design choices. Good
-   software is 30% writing of new code and 70% rewriting and thinking about the implementation.
-7. Google\
-   The most important skill of a programmer is googling. We don’t know everything, but we know where to find it.
+1. **A lot of private programming in my free time. Not related to my studies at all.**
+   In some weeks I spend 20 hours or more on programming of private projects.
+   This practice allowed me to make a lot of mistakes and just try stuff.  
+2. **Listen to people who know what they do**.
+   I was lucky and had some friends which were way more experienced than me.
+   These friends told me when I was doing bad stuff and also send me helpful links to documentations which taught me a lot of best practices.
+3. **Ask when you have problems**  
+   Programmers tend to just try until it works and often take the first working solution.
+   Sadly this solution is often not the best working solution.
+4. **Don’t trust YouTube**  
+   Most YouTube videos are bad when it comes to programming for several reasons. 
+   Most motivated people are the newest and don’t know what the best practise is.
+   You can’t correct mistakes in videos and wrong videos are online for ages.
+5. **Use official sources**  
+   If you have a problem with java read the java documentation. 
+   Same for python or your database and basically everything else.
+   All these languages and applications have very good documentation, which will help you to improve your skills.
+   There are also a lot of good books out there, which will help you to learn new languages or using databases.
+6. **Find a buddy for code review**  
+   Find a friend.
+   Ideally this friend is more experienced than you, but it can also be one with the same experience.
+   Review each other code and look for pitfalls or silly mistakes and discuss general design choices.
+   Good software is 30% writing of new code and 70% rewriting and thinking about the implementation.
+7. **Google**  
+   The most important skill of a programmer is googling.
+   We don’t know everything, but we know where to find it.
