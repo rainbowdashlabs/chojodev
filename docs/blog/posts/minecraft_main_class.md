@@ -14,7 +14,7 @@ categories:
 
 [German Version](../de/minecraft_main_class.md)
 
-The minecraft main class, or the class which usually extends `JavaPlugin`, is nearly always suspect of discussions when 
+The minecraft main class, or the class which usually extends `JavaPlugin`, is nearly always subject of discussions when 
 it comes to naming. 
 In this post I try to explain my point of view, and also show my approach on naming them.
 
