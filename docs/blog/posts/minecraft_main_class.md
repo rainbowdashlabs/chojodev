@@ -103,10 +103,10 @@ We communicate clearly that our class is a plugin and also directly show our plu
 
 ## I don't have a domain
 
-That is not a problem. You probably have a GitHub account already and if not I strongly recommend to make one.
+That is not a problem. You probably have a GitHub or GitLab account already and if not I strongly recommend to make one.
 We use domains because we know that only we use it (ideally).
-So everything you need is something unique that is bound to you, which is the case when you have a GitHub account.
-In that case you can use `io.github.username` as your namespace.
+So everything you need is something unique that is bound to you, which is the case when you have a GitHub or GitLab account.
+In that case you can use `io.github.username` or `io.gitlab.username` as your namespace.
 You can even use this namespace for publishing to maven central!
 
 ## Conclusion
