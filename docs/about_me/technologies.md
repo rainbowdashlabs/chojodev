@@ -15,7 +15,7 @@ I compiled a list of my major technologies, tools and languages on this page.
 **Confidence:** ★★★★⯪
 
 The main language for my private projects.
-Be it [minecraft plugins](../minecraft) or [discord bots](../discord).
+Be it [minecraft plugins](../minecraft/index.md) or [discord bots](../discord/index.md).
 
 #### Framework and Libraries
 

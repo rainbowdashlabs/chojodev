@@ -1,7 +1,8 @@
-site_name: Chojo - Portfolio
+site_name: Chojo
 site_url: https://chojo.dev/
-site_description: Welcome to my portfolio page.
+site_description: Welcome to my website.
 repo_url: https://github.com/rainbowdashlabs/chojodev/
+copyright: Chojo 2023
 repo_name: chojo.dev
 docs_dir: docs
 site_dir: site
@@ -17,7 +18,7 @@ plugins:
       post_url_format: "{date}/{slug}"
   - rss:
       match_path: blog/posts/.*
-      abstract_chars_count: 160  # -1 for full content
+      abstract_chars_count: -1  # -1 for full content
       abstract_delimiter: <!-- more -->
       date_from_meta:
         as_creation: "date"
