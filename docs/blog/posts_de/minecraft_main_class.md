@@ -1,3 +1,9 @@
+---
+date: 2023-08-03
+authors:
+  - chojo  
+---
+
 # Die Main Klasse des Plugins. Eine ständige Benennungsdiskussion!
 
 Die Minecraft Main Klasse, oder die Klasse, die normalerweise von `JavaPlugin` erbt, ist fast immer Anlass für Diskussionen, wenn 
