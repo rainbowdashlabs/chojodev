@@ -86,7 +86,7 @@ like this:
 ```java
 dev.someone.nele.Main nele = dev.someone.nele.Main.getInstance();
 dev.someone.lara.Main lara = dev.someone.lara.Main.getInstance();
-dev.someone.lara.Main maya = dev.someone.maya.Main.getInstance();
+dev.someone.maya.Main maya = dev.someone.maya.Main.getInstance();
 ```
 
 Instead, if you follow the naming mentioned above, it would look like this:
