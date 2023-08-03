@@ -4,9 +4,9 @@ hide:
   - toc
 ---
 
-# Welcome
+# Welcome on my page!
 
-![fire_fox_PS_blanko.png](assets/fire_fox_PS_blanko.png){ align=right width="400" }
+![A fox with a firefighter suite](assets/fire_fox_PS_blanko.png){ align=right width="400" }
 
 Hey, I am Chojo.
 I work in a Berlin based Data Science company since 2019 as a software/backend developer and lead backend developer
@@ -29,8 +29,8 @@ Have fun exploring my little page c:
 
 If you want to contact me you can do this via `mail [at] chojo [dot] dev` or via my Discord Server.
 
-[![](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
+[![Discord Server invite](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
 
 There is also a dedicated discord for my Minecraft plugins
 
-[![](https://discordapp.com/api/guilds/718502316940066927/widget.png?style=banner3)](https://discord.eldoria.de)
+[![Discord Server invite](https://discordapp.com/api/guilds/718502316940066927/widget.png?style=banner3)](https://discord.eldoria.de)
