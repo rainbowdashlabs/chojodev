@@ -6,6 +6,8 @@ authors:
 
 # Die Main Klasse des Plugins. Eine ständige Benennungsdiskussion!
 
+[English Version](../posts/minecraft_main_class.md)
+
 Die Minecraft Main Klasse, oder die Klasse, die normalerweise von `JavaPlugin` erbt, ist fast immer Anlass für Diskussionen, wenn 
 wenn es um die Namensgebung geht. 
 In diesem Beitrag versuche ich meinen Standpunkt zu erläutern und zeige auch meinen Ansatz zur Namensgebung.
