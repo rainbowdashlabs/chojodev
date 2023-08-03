@@ -1,11 +1,22 @@
 version: "3.8"
 
 services:
-  docs:
+  docs-dev:
     volumes:
+      - "./.git:/docs/.git"
       - "./docs/:/docs/docs"
       - "./mkdocs.yml:/docs/mkdocs.yml"
     build:
       dockerfile: dev.Dockerfile
     ports:
       - "80:80"
+    profiles:
+      - dev
+
+  docs:
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    profiles:
+      - prod
