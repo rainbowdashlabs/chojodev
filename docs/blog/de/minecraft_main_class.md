@@ -10,7 +10,7 @@ Die Minecraft Main Klasse, oder die Klasse, die normalerweise von `JavaPlugin` e
 wenn es um die Namensgebung geht. 
 In diesem Beitrag versuche ich meinen Standpunkt zu erläutern und zeige auch meinen Ansatz zur Namensgebung.
 
-<!-- mehr -->
+<!-- more -->
 
 Um zu verstehen, warum wir immer wieder darüber diskutieren, müssen wir zunächst verstehen, was die sogenannte `Main` Klasse eigentlich ist.
 

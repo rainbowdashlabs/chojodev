@@ -19,7 +19,6 @@ plugins:
   - rss:
       match_path: blog/posts/.*
       abstract_chars_count: -1  # -1 for full content
-      abstract_delimiter: <!-- more -->
       date_from_meta:
         as_creation: "date"
         as_update: false
