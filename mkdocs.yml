@@ -60,6 +60,10 @@ nav:
       - 'Sql Java Tutorial': more/sql_java.md
 
 theme:
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  icon:
+    repo: fontawesome/brands/github
   features:
     - navigation.instant
     - navigation.tracking
@@ -80,14 +84,14 @@ theme:
       primary: pink
       accent: light blue
       toggle:
-        icon: material/toggle-switch-off-outline
+        icon: material/weather-night
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: pink
       accent: light blue
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-sunny
         name: Switch to light mode
 markdown_extensions:
   - pymdownx.highlight:
