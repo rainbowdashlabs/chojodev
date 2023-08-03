@@ -18,7 +18,7 @@ In this post I try to explain my point of view, and also show my approach on nam
 
 <!-- more -->
 
-To undestand why we always discuss this, we first have to understand what the so called `Main` class actually is.
+To understand why we always discuss this, we first have to understand what the so called `Main` class actually is.
 
 ## The java main class
 
@@ -59,10 +59,10 @@ A plugin with the name `Maya` by me using the domain `chojo.dev` would then be n
 This won't be by far the holy grail for naming.
 However, this solves two big issues:
 
-### 1. Namespace conflics
+### 1. Namespace conflicts
 
 On minecraft servers we always share the server with multiple plugins which are most probably not written all by 
-ourselfs.
+ourselves.
 We might run our plugin on a server with 50 or even 100 other plugins.
 Therefore, it is important that we choose a unique namespace which is `tld.domain`.
 Furthermore, we need to avoid conflicts with our own plugins.
@@ -98,12 +98,12 @@ MayaPlugin maya = MayaPlugin.getInstance();
 ```
 
 Isn't this much more readable?
-We avoid not only namespace conficts but also class name conflicts. 
+We avoid not only namespace conflicts but also class name conflicts. 
 We communicate clearly that our class is a plugin and also directly show our plugins name with it as well.
 
 ## I don't have a domain
 
-That is not a problem. You probably have a GitHub account already and if not I strongy recommand to make one.
+That is not a problem. You probably have a GitHub account already and if not I strongly recommend to make one.
 We use domains because we know that only we use it (ideally).
 So everything you need is something unique that is bound to you, which is the case when you have a GitHub account.
 In that case you can use `com.github.username` or `io.github.username` as your namespace.
