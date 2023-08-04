@@ -13,7 +13,7 @@ categories:
 
 [English Version](../posts/gradle_minecraft_basic_and_advanced.md)
 
-In diesem Blogbeitrag geht es um die Minecraft-Entwicklung mit Gradle.
+In diesem Blogbeitrag geht es um die Entwicklung von Minecraft-Plugins für Paper- und Spigot-Server mit Gradle.
 Die Minecraft-Community hat rund um das Build-Tool Gradle ein riesiges Ökosystem für Minecraft aufgebaut.
 Anstatt dich mit einer Beispiel-Gradle-Datei zu überschütten, werden wir Schritt für Schritt vorgehen.
 Wir beginnen mit dem grundlegenden gradle-Layout, legen Repositories und Abhängigkeiten fest und fahren mit Plugins fort.
@@ -521,16 +521,16 @@ Jetzt wird unsere Bibliothek von Spigot/Paper geladen, wenn es unser Plugin läd
 Das funktioniert, weil sich sadu im Maven Central befindet und spigot/paper die Bibliotheken von dort herunterlädt.
 Bibliotheken, die sich nicht im Maven Central befinden, müssen trotzdem geshaded werden.
 
-####  Paper Plugins
+#### Paper-Plugins
 
-Paper plugins are a type of plugin exclusive to paper servers.
-They are very experimental.
-They also lack a build in solution for commands and configuration files.
-If you are a beginner I highly recommend to not use them.
+Paper-Plugins sind eine Art von Plugins, die es nur für Paper-Server gibt.
+Sie sind sehr experimentell.
+Außerdem fehlt ihnen eine eingebaute Lösung für Befehle und Konfigurationsdateien.
+Wenn du ein Anfänger bist, empfehle ich dir dringend, sie nicht zu benutzen.
 
-In paper plugins you can load dependencies from custom repositories as well. Read more about this [here](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
+Du kannst mit Paper-Plugins auch Abhängigkeiten aus benutzerdefinierten Repositories laden. Lies mehr darüber [hier](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
 
-More about paper plugins can be found [here](https://docs.papermc.io/paper/reference/paper-plugins) and [here](https://docs.papermc.io/paper/dev/getting-started/paper-plugins) 
+Mehr über Paper Plugins findest du [hier](https://docs.papermc.io/paper/reference/paper-plugins) und [hier](https://docs.papermc.io/paper/dev/getting-started/paper-plugins)
 
 
 ## Abhängigkeiten in unser Jar shaden
