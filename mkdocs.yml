@@ -112,8 +112,15 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+# Emoji search
+# https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/
+
+
 extra:
   social:
+    - name: Mastodon@chaos.social
+      icon: fontawesome/brands/mastodon
+      link: https://chaos.social/@chojo
     - name: Patreon
       icon: fontawesome/brands/patreon
       link: https://www.patreon.com/eldoriaplugins
