@@ -265,7 +265,7 @@ Im Abschnitt " Dependencies" können wir zunächst zwei verschiedene Arten von A
 ```java
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo", "sadu", "1.3.1")
+    implementation("de.chojo.sadu", "sadu", "1.3.1")
 }
 ```
 
@@ -497,7 +497,7 @@ Du erinnerst dich wahrscheinlich daran, dass unser Abschnitt mit den Abhängigke
 ```java
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo", "sadu", "1.3.1")
+    implementation("de.chojo.sadu", "sadu", "1.3.1")
 }
 ```
 
@@ -508,7 +508,7 @@ Dazu müssen wir nur `implementation` in `bukkitLibrary` ändern:
 ```java
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    bukkitLibrary("de.chojo", "sadu", "1.3.1")
+    bukkitLibrary("de.chojo.sadu", "sadu", "1.3.1")
 }
 ```
 
@@ -551,7 +551,7 @@ Unsere Abhängigkeiten sehen erneut wie folgt aus:
 ```java
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo", "sadu", "1.3.1")
+    implementation("de.chojo.sadu", "sadu", "1.3.1")
 }
 ```
 
