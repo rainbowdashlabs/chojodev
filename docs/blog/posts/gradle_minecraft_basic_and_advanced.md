@@ -50,7 +50,7 @@ To update this version you only need one command:
 This works on Unix systems as well as in Windows PowerShell or git bash.
 If you are using windows cmd, you will need to use `gradlew.bat` instead.
 
-Check the [Gradle website] (https://gradle.org/releases/) for the latest version.
+Check the [Gradle website](https://gradle.org/releases/) for the latest version.
 
 ## Setting up a Gradle project
 

@@ -49,7 +49,7 @@ Um diese Version zu aktualisieren, brauchst du nur einen Befehl:
 Das funktioniert auf Unix-Systemen und auch in der Windows PowerShell oder Git Bash.
 Wenn du die Windows cmd verwendest, musst du stattdessen `gradlew.bat` benutzen.
 
-Die neueste Version findest du auf der [gradle-Website] (https://gradle.org/releases/).
+Die neueste Version findest du auf der [gradle-Website](https://gradle.org/releases/).
 
 ## Setting up a Gradle project
 
