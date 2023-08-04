@@ -393,6 +393,11 @@ Now this is of course not in your server yet, but we have a very simple way for 
 
 ## Copy a jar after build
 
+!!! warning 
+
+    Instead of doing this you can directly run a paper server with your plugin in it.
+    Take a look at the [server run section](#run-server-with-your-jar)
+
 To copy our jar into our server we can simply create our own task.
 
 Take a look at the code. Explanations are shown when you hover over the plus for each line
@@ -593,6 +598,11 @@ Since it is now in your namespace and your plugin it is no longer possible to cl
 Shadow will also replace every path to the class in your code to the new relocated path.
 
 #### Using the output in copy
+
+!!! warning
+
+    Instead of doing this you can directly run a paper server with your plugin in it.
+    Take a look at the [server run section](#run-server-with-your-jar)
 
 To use the output of `shadowJar` for our copy task, all you need to change the `jar` task to the `shadowJar` task.
 

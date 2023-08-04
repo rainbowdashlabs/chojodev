@@ -392,6 +392,11 @@ Jetzt ist es natürlich noch nicht auf deinem Server, aber dafür gibt es eine s
 
 ## Jar nach dem Build kopieren
 
+!!! warning
+
+    Stattdessen kannst du auch direkt einen Paper Server mit deinem Plugin starten.
+    Wirf einen Blick auf den Abschnitt [Server ausführen](#starte-den-server-mit-deiner-jar)
+
 Um unser jar auf unseren Server zu kopieren, können wir einfach einen eigenen Task erstellen.
 
 Wirf einen Blick auf den Code. Erklärungen werden angezeigt, wenn du mit dem Mauszeiger über das Plus für jede Zeile fährst
@@ -597,6 +602,11 @@ Shadow ersetzt außerdem alle Pfade zu der Klasse in deinem Code durch den neuen
 
 #### Verwendung der Ausgabe in copy
 
+!!! warning
+
+    Stattdessen kannst du auch direkt einen Paper Server mit deinem Plugin starten.
+    Wirf einen Blick auf den Abschnitt [Server ausführen](#starte-den-server-mit-deiner-jar)
+
 Um die Ausgabe von `shadowJar` für unseren copy Task zu verwenden, musst du nur den `jar` Task in den `shadowJar` Task ändern.
 
 ```java
@@ -682,12 +692,12 @@ tasks {
 Und das war's.
 Jetzt kannst du nms so bequem wie möglich benutzen.
 
-## Starte den Server mit deinem Jar
+## Starte einen Server mit deiner Jar
 
 Um dein Plugin schnell zu testen, kannst du direkt einen Server starten.
 Du musst dazu nur das [run-task plugin](https://github.com/jpenilla/run-task) zu deiner Build-Datei hinzufügen.
 
-Ich verzichte darauf, die Readme hierher zu kopieren, da ich ihr keinen weiteren Wert beimessen kann.
+Ich verzichte darauf, die Readme hierher zu kopieren, da ich ihr keinen weiteren Informationen hinzufügen kann.
 
 ## Vielen Dank!
 
