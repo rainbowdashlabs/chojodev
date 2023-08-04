@@ -374,13 +374,18 @@ While we could stop here and just be happy that it works there is still a lot (a
 We also still have to solve the issue of our library not being included that we imported with `implementation` earlier.
 So while you could call it a day now I highly recommend to keep reading!
 
-For now, I will just show you the two ways of executing a Gradle task
+For now, I will just show you the two ways of executing a Gradle task.
+
+!!! note
+
+    You can not only run the build task with this but **any other task as well**.
+    If you are using IntelliJ you can take a look at the other tasks that are available.
 
 === "Via cli"
 
     Go into your cli and execute `./gradlew build` or `gradlew.bat build` depending on your operating system
 
-=== "via IntelliJ"
+=== "Via IntelliJ"
 
     Open the Gradle window on the right side. Go to tasks -> build and execute the build task by clicking on it.
 

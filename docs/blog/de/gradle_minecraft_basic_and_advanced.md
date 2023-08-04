@@ -373,7 +373,12 @@ Wir könnten hier aufhören und uns einfach freuen, dass es funktioniert, aber e
 Wir müssen auch noch das Problem lösen, dass unsere Bibliothek nicht enthalten ist, die wir zuvor mit `implementation` importiert haben.
 Du könntest jetzt aufhören, aber ich empfehle dir, weiterzulesen!
 
-Für den Moment zeige ich dir nur die beiden Möglichkeiten, einen Gradle-Task auszuführen
+Für den Moment zeige ich dir nur die beiden Möglichkeiten, einen Gradle-Task auszuführen.
+
+!!! Hinweis
+
+    Du kannst damit nicht nur den Build Task ausführen, sondern auch **jeden anderen Task**.
+    Wenn du IntelliJ verwendest, kannst du dir die anderen Tasks ansehen, die verfügbar sind.
 
 === "Über cli"
 
