@@ -511,6 +511,17 @@ Now our library will be loaded by spigot/paper when it loads our plugin and will
 This works because sadu is located at maven central and spigot/paper downloads libraries from there.
 Libraries which are not located at maven central still need to be shaded.
 
+#### Papier-Plugins
+
+Paper-Plugins sind eine Art von Plugins, die es nur für Paper-Server gibt.
+Sie sind sehr experimentell.
+Außerdem fehlt ihnen eine eingebaute Lösung für Befehle und Konfigurationsdateien.
+Wenn du ein Anfänger bist, empfehle ich dir dringend, sie nicht zu benutzen.
+
+Du kannst mit Paper-Plugins auch Abhängigkeiten aus benutzerdefinierten Repositories laden. Lies mehr darüber [hier](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
+
+Mehr über Paper Plugins findest du [hier](https://docs.papermc.io/paper/reference/paper-plugins) und [hier](https://docs.papermc.io/paper/dev/getting-started/paper-plugins)
+
 ## Shading dependencies into our jar
 
 Let's assume that sadu is not located at maven central, and we can't use the library loader.

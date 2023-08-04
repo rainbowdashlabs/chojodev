@@ -434,7 +434,7 @@ Wenn du bereits eine `plugin.yml` erstellt hast, kann es sein, dass es funktioni
 
 Wenn du bereits eine `plugin.yml` erstellt hast, kannst du sie jetzt wieder löschen oder bis zum Ende des Abschnitts warten.
 
-Um unsere `plugin.yml` zu erstellen, werden wir das `plugin-yml` [gradle plugin by minecrell] (https://github.com/Minecrell/plugin-yml) verwenden.
+Um unsere `plugin.yml` zu erstellen, werden wir das `plugin-yml` [gradle plugin by minecrell](https://github.com/Minecrell/plugin-yml) verwenden.
 
 ### Importieren
 ![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/net.minecrell.plugin-yml.bukkit?label=Version)
@@ -510,6 +510,18 @@ dependencies {
 Jetzt wird unsere Bibliothek von Spigot/Paper geladen, wenn es unser Plugin lädt, und ist während der Laufzeit verfügbar.
 Das funktioniert, weil sich sadu im Maven Central befindet und spigot/paper die Bibliotheken von dort herunterlädt.
 Bibliotheken, die sich nicht im Maven Central befinden, müssen trotzdem geshaded werden.
+
+####  Paper Plugins
+
+Paper plugins are a type of plugin exclusive to paper servers.
+They are very experimental.
+They also lack a build in solution for commands and configuration files.
+If you are a beginner I highly recommend to not use them.
+
+In paper plugins you can load dependencies from custom repositories as well. Read more about this [here](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
+
+More about paper plugins can be found [here](https://docs.papermc.io/paper/reference/paper-plugins) and [here](https://docs.papermc.io/paper/dev/getting-started/paper-plugins) 
+
 
 ## Abhängigkeiten in unser Jar shaden
 
