@@ -16,7 +16,7 @@ categories:
 In diesem Blogbeitrag geht es um die Entwicklung von Minecraft-Plugins für Paper- und Spigot-Server mit Gradle.
 Die Minecraft-Community hat rund um das Build-Tool Gradle ein riesiges Ökosystem für Minecraft aufgebaut.
 Anstatt dich mit einer Beispiel-Gradle-Datei zu überschütten, werden wir Schritt für Schritt vorgehen.
-Wir beginnen mit dem grundlegenden gradle-Layout, legen Repositories und Abhängigkeiten fest und fahren mit Plugins fort.
+Wir beginnen mit dem grundlegenden Gradle-Layout, legen Repositories und Abhängigkeiten fest und fahren mit Plugins fort.
 
 <!-- more -->
 
@@ -49,7 +49,7 @@ Um diese Version zu aktualisieren, brauchst du nur einen Befehl:
 Das funktioniert auf Unix-Systemen und auch in der Windows PowerShell oder Git Bash.
 Wenn du die Windows cmd verwendest, musst du stattdessen `gradlew.bat` benutzen.
 
-Die neueste Version findest du auf der [gradle-Website](https://gradle.org/releases/).
+Die neueste Version findest du auf der [Gradle-Website](https://gradle.org/releases/).
 
 ## Setting up a Gradle project
 
@@ -260,7 +260,7 @@ Ich empfehle dir, dies nur für die lokale Entwicklung zu tun, da dies die Mögl
     
     Wenn du importe für JUnit hier hast kannst du diese erstmal löschen.
 
-Im Abschnitt " Dependencies" können wir zunächst zwei verschiedene Arten von Abhängigkeiten definieren:
+Im Abschnitt `dependencies` können wir zunächst zwei verschiedene Arten von Abhängigkeiten definieren:
 
 ```java
 dependencies {
@@ -268,6 +268,10 @@ dependencies {
     implementation("de.chojo.sadu", "sadu", "1.3.1")
 }
 ```
+
+!!! note
+
+    Sadu ist hier nur zu demonstrationszwecken und nicht zwingend benötigt
 
 Ich habe hier zwei verschiedene Arten verwendet, um Abhängigkeiten zu deklarieren.
 Beide sind gültig.
@@ -283,7 +287,7 @@ Du kannst sie entweder als einen String oder als drei separate Strings deklarier
 === "Als compileOnly"
 
     Die `compileOnly`-Importe sind Abhängigkeiten, die wir nur zum Bauen brauchen, aber bereits auf dem Server sind.
-    Das wird fast immer nur Papier für dich sein.
+    Das wird fast immer nur Paper für dich sein.
 
 ### Abschnitt Tasks
 
@@ -444,7 +448,7 @@ Wenn du bereits eine `plugin.yml` erstellt hast, kann es sein, dass es funktioni
 
 Wenn du bereits eine `plugin.yml` erstellt hast, kannst du sie jetzt wieder löschen oder bis zum Ende des Abschnitts warten.
 
-Um unsere `plugin.yml` zu erstellen, werden wir das `plugin-yml` [gradle plugin by minecrell](https://github.com/Minecrell/plugin-yml) verwenden.
+Um unsere `plugin.yml` zu erstellen, werden wir das `plugin-yml` [Gradle plugin by minecrell](https://github.com/Minecrell/plugin-yml) verwenden.
 
 ### Importieren
 ![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/net.minecrell.plugin-yml.bukkit?label=Version)
@@ -506,7 +510,7 @@ dependencies {
 }
 ```
 
-Bisher hatten wir das Problem, dass sadu nicht in unserem jar enthalten war.
+Bisher hatten wir das Problem, dass SADU nicht in unserem jar enthalten war.
 Wenn wir das Plugin `plugin-yml` verwenden und Minecraft 1.16.5 oder höher einsetzen, können wir den Library Loader nutzen.
 Dazu müssen wir nur `implementation` in `bukkitLibrary` ändern:
 
@@ -518,7 +522,7 @@ dependencies {
 ```
 
 Jetzt wird unsere Bibliothek von Spigot/Paper geladen, wenn es unser Plugin lädt, und ist während der Laufzeit verfügbar.
-Das funktioniert, weil sich sadu im Maven Central befindet und spigot/paper die Bibliotheken von dort herunterlädt.
+Das funktioniert, weil sich SADU im Maven Central befindet und Spigot/Paper die Bibliotheken von dort herunterlädt.
 Bibliotheken, die sich nicht im Maven Central befinden, müssen trotzdem geshaded werden.
 
 #### Paper-Plugins
@@ -537,7 +541,7 @@ Mehr über Paper Plugins findest du [hier](https://docs.papermc.io/paper/referen
 
 ![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.github.johnrengelman.shadow?label=Version)
 
-Nehmen wir an, sadu befindet sich nicht im Maven Central und wir können den Library Loader nicht verwenden.
+Nehmen wir an, SADU befindet sich nicht im Maven Central und wir können den Library Loader nicht verwenden.
 
 In diesem Fall müssen wir ein anderes Plugin namens shadow verwenden. Die aktuellste Version steht oben
 
@@ -580,7 +584,7 @@ tasks {
 
 #### Verschiebung
 
-Jetzt, wo unsere Bibliotheken gesahded sind, müssen wir etwas tun, das wir Relocation nennen.
+Jetzt, wo unsere Bibliotheken geshadet sind, müssen wir etwas tun, das wir Relocation nennen.
 Das ist wichtig, um Konflikte mit anderen Plugins zu vermeiden, wenn du dieselbe Bibliothek shadest.
 Dazu müssen wir es konfigurieren, aber dieses Mal konfigurieren wir nicht das Plugin, sondern den Task namens `shadowJar`.
 
@@ -631,13 +635,16 @@ tasks {
 
 1. Ändere es hier
 
-## Arbeiten mit nms und Paperweight
+## NMS und internals mit Paperweight Userdev
 
 ![GitHub-Veröffentlichung (mit Filter)](https://img.shields.io/github/v/release/PaperMC/paperweight?label=Latest%20Version)
 
 Ich rate davon ab, nms in irgendeiner Weise zu verwenden, aber wenn du das möchtest, solltest du das `userdev` Plugin von `paperweight` benutzen.
-Damit kannst du eine unobfuscated Jar verwenden und erhältst eine Menge lesbarer Variablen- und Funktionsnamen.
-Es stellt auch sicher, dass du beim Update auf eine neue Version neben den Paketnamen keine Codeänderungen vornehmen musst.
+Damit kannst du in einer Umgebung mit unverschleierten Namen entwickeln.
+Es ist auch die einzige unterstützte Möglichkeit, auf die Interna von `org.bukkit.craftbukkit.v1_XX_RX` zuzugreifen.
+Es stellt auch sicher, dass du beim Upgrade auf eine neue Version keinen Code ändern musst, der das Paket `net.minecraft` verwendet.
+Natürlich musst du trotzdem Code ändern, wenn Mojang etwas geändert hat.
+Du musst auch immer noch die Paketnamen ändern, wenn du internen Code aus `org.bukkit.craftbukkit.v1_XX_RX` verwendest;
 
 ### Hinzufügen des Repositorys
 
@@ -681,8 +688,8 @@ dependencies {
 ```
 
 Die Version, die du hier eingibst, ist die gleiche, die du vorher für Paper verwendet hast. Du entfernst nur die Group und die Artifact-ID.
-Paper verwendet die unobfuscated Jar-Datei.
-Das bedeutet, dass wir unsere Jar-Datei vor dem Erstellen neu verschlüsseln müssen.
+Paper verwendet eine obfuscated Jar-Datei.
+Das bedeutet, dass wir unsere Jar-Datei vor dem Erstellen neu onfuscaten müssen.
 Das können wir tun, indem wir erneut einen Task konfigurieren.
 Diesmal konfigurieren wir den Task `assemble` und setzen dort ein `dependsOn` auf unseren reobfuscation Task.
 
@@ -693,6 +700,12 @@ tasks {
     }
 }
 ```
+
+!!! note
+
+    Paper plant, in Zukunft ein nicht-obfuscated jar für Server zu verwenden.
+    Damit wird dieser Schritt überflüssig.
+
 
 Und das war's.
 Jetzt kannst du nms so bequem wie möglich benutzen.
