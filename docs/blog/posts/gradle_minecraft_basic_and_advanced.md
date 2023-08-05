@@ -287,7 +287,8 @@ You can either declare them as one string or as three separate strings.
 === "As compileOnly"
 
     The `compileOnly` imports are dependencies that we only need to build our project, but are either not needed to run it, or are provided in some other way.
-    In most cases, Paper will be your only compileOnly dependency.
+    This means that dependencies like Paper, FAWE, LuckPerms and in general any other api by other plugins will be imported as `compileOnly`.
+    APIs that are not available as plugins on the server, which can be the case for Inventory APIs for example, must of course be imported as an `implementation`.
 
 ### Tasks section
 

@@ -287,7 +287,8 @@ Du kannst sie entweder als einen String oder als drei separate Strings deklarier
 === "Als compileOnly"
 
     Die `compileOnly`-Importe sind Abhängigkeiten, die wir nur zum Bauen brauchen, aber bereits auf dem Server sind.
-    Das wird fast immer nur Paper für dich sein.
+    Das bedeutet, dass Abhängigkeiten wie Paper, FAWE, LuckPerms und generell jede andere API von anderen Plugins als `compileOnly` importiert werden.
+    APIs, welche nicht als Plugin vorliegen auf dem Server, was zum Beispiel bei Inventory APIs der Fall sein kann müssen natürlich als `implementation` importiert werden.
 
 ### Abschnitt Tasks
 
