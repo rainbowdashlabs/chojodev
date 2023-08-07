@@ -7,19 +7,12 @@ rootdir = pathlib.Path().absolute().joinpath("templates")
 templates = {}
 
 
-def apply_template(file: TextIO):
-    text = file.read()
-    start = hash(text)
-    text = _process_templates(text, False)
-    if start == hash(text):
-        return
-    file.seek(0)
-    file.write(text)
-    file.truncate()
+def apply_template(text: str):
+    return _process_templates(text, False)
 
 
 def _process_templates(text: str, recursive: bool = True) -> str:
-    start = text.__hash__()
+    start = hash(text)
     for k, v in templates.items():
         text = text.replace(f"{{{{ {k} }}}}", v)
 
