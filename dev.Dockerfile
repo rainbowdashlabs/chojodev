@@ -16,4 +16,6 @@ COPY Pipfile Pipfile.lock /docs/
 
 RUN pipenv install
 
+RUN pipenv run python tools/build.py
+
 ENTRYPOINT ["pipenv","run","mkdocs", "serve", "-a", "0.0.0.0:80"]
