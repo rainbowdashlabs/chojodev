@@ -1,6 +1,6 @@
 # Lyna
 
-**Links:** [Github](https://github.com/rainbowdashlabs/lyna/)
+**Links:** [Source Code](https://github.com/rainbowdashlabs/lyna/)
 
 **Used Frameworks:** [JDA](https://github.com/discord-jda/JDA), CJDA-Utils, [SADU](../libraries/sadu.md)
 

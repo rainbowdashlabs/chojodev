@@ -211,5 +211,4 @@ Wenn du sie ändern willst, erstellst du sie einfach erneut mit demselben Namen.
 ]()
 ## Danke
 
-Danke, dass du meinen Beitrag gelesen hast.
-Ich hoffe, er hat dir geholfen!
+{{ blog_footer_de }}
