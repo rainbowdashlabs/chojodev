@@ -720,5 +720,6 @@ Ich verzichte darauf, die Readme hierher zu kopieren, da ich ihr keinen weiteren
 
 ## Vielen Dank!
 
-Danke, dass du mir bis hierher gefolgt bist.
 Du hast jetzt ein sehr gutes Verständnis für die Minecraft-Entwicklung mit Gradle.
+
+{{ blog_footer_de }}

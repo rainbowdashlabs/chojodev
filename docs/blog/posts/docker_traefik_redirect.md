@@ -213,5 +213,4 @@ If you want to change it, just create it again with the same name.
 
 ## Thank you
 
-Thanks for reading my post.
-I hope it helped you!
+{{ blog_footer_en }}

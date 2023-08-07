@@ -112,3 +112,5 @@ Die Plugin-Klasse selbst sollte den Namen des Plugins enthalten, optional mit de
 eine Plugin-Klasse handelt.
 
 Wenn Du also das nächste Mal deine Plugin Klasse (nicht Main Class) erstellst und benennst, bedenke dies und wähle einen besseren Namen, für eine bessere Welt!
+
+{{ blog_footer_de }}

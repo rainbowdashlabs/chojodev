@@ -27,10 +27,4 @@ me on [GitHub](https://github.com/rainbowdashlabs)**
 
 Have fun exploring my little page c:
 
-If you want to contact me you can do this via `mail [at] chojo [dot] dev` or via my Discord Server.
-
-[![Discord Server invite](https://discordapp.com/api/guilds/1120671561368748092/widget.png?style=banner3)](https://discord.chojo.dev)
-
-There is also a dedicated discord for my Minecraft plugins
-
-[![Discord Server invite](https://discordapp.com/api/guilds/718502316940066927/widget.png?style=banner3)](https://discord.eldoria.de)
+{{ contact_me }}

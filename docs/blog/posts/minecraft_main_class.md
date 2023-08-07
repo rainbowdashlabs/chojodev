@@ -120,3 +120,5 @@ a plugin class.
 
 So next time you create and name your plugin class (not main class), consider this and choose a better name to make 
 a better world!
+
+{{ blog_footer_en }}

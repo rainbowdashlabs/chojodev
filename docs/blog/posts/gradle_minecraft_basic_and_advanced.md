@@ -723,3 +723,5 @@ I'll refrain from simply copying their readme here, as I can't add any more valu
 
 Thank you for sticking with me so far.
 You now have a very good understanding of Minecraft development with Gradle.
+
+{{ blog_footer_en }}
