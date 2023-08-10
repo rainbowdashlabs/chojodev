@@ -355,6 +355,6 @@ Warum einen schlechten Weg benutzen, wenn es gute Wege gibt.
 
 ## Vielen Dank!
 
-Jetzt weißt du, wie du dich richtig in dein Minecraft-Projekt einloggen kannst!
+Jetzt weißt du, wie du dich richtig in deinem Minecraft-Projekt loggen kannst!
 
 {{ blog_footer_de }}
