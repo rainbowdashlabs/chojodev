@@ -205,10 +205,10 @@ wget https://chojo.dev/assets/files/redirect.sh && chmod +x redirect.sh
 
     Lade niemals bash scripte runter ohne einen Blick drauf zu werfen bevor du sie ausführts!
 
-[Das Bash-Skript erstellt eine Datei für jede Weiterleitung.
+Das Bash-Skript erstellt eine Datei für jede Weiterleitung.
 Das macht sie leicht zu finden.
 Wenn du sie ändern willst, erstellst du sie einfach erneut mit demselben Namen.
-]()
+
 ## Danke
 
 {{ blog_footer_de }}
