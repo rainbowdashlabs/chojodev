@@ -130,6 +130,7 @@ getLogger().info("This is a info");
 getLogger().warning("This is a warning");
 getLogger().severe("This is an error");
 ```
+
 ```log
 [16:13:08 INFO]: [MyPlugin] This is a info
 [16:13:08 WARN]: [MyPlugin] This is a warning
@@ -225,6 +226,7 @@ Um eine Logger-Instanz für deine Klasse zu erhalten, brauchst du die Klasse `Lo
 Da dies langweilige Handarbeit ist, kannst du einfach ein [Live Template](https://www.jetbrains.com/help/idea/using-live-templates.html) dafür erstellen, wenn du IntelliJ verwendest.
 
 Das Live-Template sieht wie folgt aus (eine Importvorlage findest du im Spoiler unten):
+
 ```java
 private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger($class$.class);
 ```
@@ -261,6 +263,7 @@ log.info("This is a info");
 log.warn("This is a warning");
 log.error("This is an error");
 ```
+
 ```log
 [16:32:03 INFO]: [dev.chojo.myplugin.MyPlugin] This is a info
 [16:32:03 WARN]: [dev.chojo.myplugin.MyPlugin] This is a warning
@@ -316,6 +319,7 @@ Um deiner Nachricht zusätzliche Informationen hinzuzufügen, kannst du Platzhal
 ```java
 log.info("Hello {}. How was your {}? Is it already past {}?", "Chojo", "day", 2);
 ```
+
 ```log
 [16:39:49 INFO]: [dev.chojo.myplugin.MyPlugin] Hello Chojo. How was your day? Is it already past 2?
 ```
@@ -334,6 +338,7 @@ try {
     log.error("I tried to divide {} through {} and it went up in flames", first, second, e);
 }
 ```
+
 ```log
 [16:39:49 ERROR]: [dev.chojo.myplugin.MyPlugin] I tried to divide 5 through 0 and it went up in flames
 java.lang.ArithmeticException: / by zero

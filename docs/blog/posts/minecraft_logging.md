@@ -42,6 +42,7 @@ public final class MyPlugin extends JavaPlugin {
 ```
 
 This results in these outputs:
+
 ```log
 [15:39:35 INFO]: [MyPlugin] [STDOUT] Writing via std out
 [15:39:35 WARN]: Nag author(s): '[]' of 'MyPlugin v1.0.0' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
@@ -72,6 +73,7 @@ People will just end up with a printout like when using the [console sender](#co
 You don't know where it came from.
 
 If you use the default out to write, you will also get a nice message on Paper servers:
+
 ```log
 [15:39:35 INFO]: [MyPlugin] [STDOUT] Writing via std out
 [15:39:35 WARN]: Nag author(s): '[]' of 'MyPlugin v1.0.0' about their usage of System.out/err.print. Please use your plugin's logger instead (JavaPlugin#getLogger).
@@ -260,6 +262,7 @@ log.info("This is a info");
 log.warn("This is a warning");
 log.error("This is an error");
 ```
+
 ```log
 [16:32:03 INFO]: [dev.chojo.myplugin.MyPlugin] This is a info
 [16:32:03 WARN]: [dev.chojo.myplugin.MyPlugin] This is a warning
@@ -315,6 +318,7 @@ To add additional information to your message, you can define placeholders with 
 ```java
 log.info("Hello {}. How was your {}? Is it already past {}?", "Chojo", "day", 2);
 ```
+
 ```log
 [16:39:49 INFO]: [dev.chojo.myplugin.MyPlugin] Hello Chojo. How was your day? Is it already past 2?
 ```
@@ -333,6 +337,7 @@ try {
     log.error("I tried to divide {} through {} and it went up in flames", first, second, e);
 }
 ```
+
 ```log
 [16:39:49 ERROR]: [dev.chojo.myplugin.MyPlugin] I tried to divide 5 through 0 and it went up in flames
 java.lang.ArithmeticException: / by zero
