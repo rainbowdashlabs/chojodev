@@ -12,6 +12,9 @@ COPY docs/ docs/
 
 COPY .git/ .git/
 
+COPY tools tools
+COPY templates templates
+
 COPY Pipfile Pipfile.lock /docs/
 
 RUN pipenv install
