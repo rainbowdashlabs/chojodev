@@ -89,4 +89,3 @@ Its giving players a way to idle and still gain something
 Firework parade can be used to create custom firework.
 However, it never left the proof of concept state and would deserve some great rewrite before being used in production.
 Also, the text ui creator for firework is not ideal and should probably be replaced by a web editor.
-

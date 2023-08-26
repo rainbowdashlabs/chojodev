@@ -8,7 +8,6 @@ WORKDIR /docs
 
 COPY mkdocs.yml mkdocs.yml
 
-COPY docs/ docs/
 
 COPY .git/ .git/
 
@@ -18,6 +17,8 @@ COPY templates templates
 COPY Pipfile Pipfile.lock /docs/
 
 RUN pipenv install
+
+COPY docs/ docs/
 
 RUN pipenv run python tools/build.py
 
