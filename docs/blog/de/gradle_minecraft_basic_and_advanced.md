@@ -234,13 +234,13 @@ Wahrscheinlich brauchen wir zwei Repositories.
 - `mavenCentral()`   
   Dies ist das zentrale Maven-Repository, in dem sich die meisten Abhängigkeiten befinden, die wir benötigen.
   Wenn du Maven benutzt hast: Bei Maven musst du das nicht extra importieren, aber bei Gradle schon.
-- `maven("https://repo.papermc.io/repository/Maven-public/")`  
+- `maven("https://repo.papermc.io/repository/maven-public/")`  
   Dies importiert das Paper mc Repository. Natürlich kannst du das auch mit jedem anderen Repository machen.
 
 ```
 repositories {
-    MavenCentral()
-    Maven("https://repo.papermc.io/repository/Maven-public/")
+    mavenCentral()
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 ```
 
