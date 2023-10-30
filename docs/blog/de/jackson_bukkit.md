@@ -1,5 +1,6 @@
 ---
-date: 2023-10-30
+date: 2023-08-21
+draft: true
 authors:
   - chojo  
 categories:
@@ -9,34 +10,33 @@ categories:
   - java
   - paper
   - spigot
-  - jackson
 ---
 
 # Jackson Bukkit - Bukkit serialization done the right way
 
-[German Version](../de/jackson_bukkit.md)
+[English Version](../posts/jackson_bukkit.md)
 
-With the introduction of [paper plugins](https://docs.papermc.io/paper/reference/paper-plugins), paper decided to drop support for the `ConfigurationSerializable` interface.
-While this interface and the system behind it provided a usable way to de/serialise an object fairly easily, it wasn't ideal by any means.
-It was hard to learn and required a lot of boilerplate code to simply de/serialise an object.
-So we're going to say goodbye to it. It won't be missed.
+Mit der Einführung von [paper plugins](https://docs.papermc.io/paper/reference/paper-plugins) hat paper beschlossen, die Unterstützung für die Schnittstelle `ConfigurationSerializable` einzustellen.
+Diese Schnittstelle und das dahinter stehende System boten zwar eine brauchbare Möglichkeit, ein Objekt relativ einfach zu de/serialisieren, aber sie war keineswegs ideal.
+Sie war schwer zu erlernen und erforderte eine Menge Standardcode, um ein Objekt zu de/serialisieren.
+Deshalb verabschieden wir uns jetzt von ihr. Wir werden sie nicht vermissen.
 
 <!-- more -->
 
-But now we need another system to serialise Bukkit objects and our configuration in general.
-A big advantage of the built-in interface was that it could serialise bukkit objects like `Location` or `ItemStack` out of the box.
-So we needed something similar.
-For this we will use jackson with one (or two) of my libraries that I maintain.
+Aber jetzt brauchen wir ein anderes System, um Bukkit-Objekte und unsere Konfiguration im Allgemeinen zu serialisieren.
+Ein großer Vorteil der eingebauten Schnittstelle war, dass sie Bukkit-Objekte wie `Location` oder `ItemStack` sofort serialisieren konnte.
+Wir brauchten also etwas Ähnliches.
+Dafür werden wir jackson mit einer (oder zwei) meiner Bibliotheken verwenden, die ich pflege.
 
-## What is de/serialization
+## Was ist de/serialization
 
-To get you where you are, we should probably take a look at what we are actually talking about.
-De/serialisation is the process of mapping objects in a programming language into a data format.
-This data format is usually text for human-readable data, or binary for machine-readable data.
-You may have heard of them.
-They have names like yaml, json, xml, toml or properties and many more.
+Um dich auf den richtigen Weg zu bringen, sollten wir uns vielleicht erst einmal ansehen, worüber wir eigentlich reden.
+De/Serialisierung ist der Prozess, bei dem Objekte in einer Programmiersprache in ein Datenformat abgebildet werden.
+Dieses Datenformat ist normalerweise Text für menschenlesbare Daten oder binär für maschinenlesbare Daten.
+Du hast vielleicht schon von diesen Formaten gehört.
+Sie haben Namen wie yaml, json, xml, toml oder properties und viele mehr.
 
-So while our class might look like this:
+Unsere Klasse könnte also so aussehen:
 
 ```java
 public class Person {
@@ -51,8 +51,7 @@ public class Person {
 }
 ```
 
-It would look like this in various textual representations:
-
+In verschiedenen textlichen Darstellungen würde es so aussehen:
 
 === "yaml"
 
@@ -115,35 +114,35 @@ It would look like this in various textual representations:
     ```
 
 
-## The possibilities
+## Die Möglichkeiten
 
-Of course the market is huge in terms of serialization frameworks.
-To list a few:
+Natürlich ist der Markt für Serialisierungs-Frameworks riesig.
+Um ein paar zu nennen:
 
 - **[SnakeYAML](https://bitbucket.org/snakeyaml/snakeyaml/)**  
-The framework currently used by bukkit.
-Probably the most popular solution for pure yaml (I don't understand why).
-It also does only support yaml
+  Das Framework, das derzeit von bukkit verwendet wird.
+  Wahrscheinlich ist es die beliebteste Lösung für reines Yaml (ich verstehe nicht, warum).
+  Es unterstützt auch nur yaml
 - **[Configurate](https://github.com/SpongePowered/Configurate)**  
-Developed by the sponge developers it is used by a wide variety of especially minecraft projects like Paper.
-Supports JSON, HOCON, YAML and XML.
-However, it uses several other libraries like jackson under the hood.
+  Es wurde von den Sponge-Entwicklern entwickelt und wird von einer Vielzahl von Projekten verwendet, insbesondere von Minecraft-Projekten wie Paper.
+  Unterstützt JSON, HOCON, YAML und XML.
+  Allerdings verwendet es unter der Haube verschiedene andere Bibliotheken wie Jackson.
 - **[Jackson](https://github.com/FasterXML/jackson-core)**  
-Jackson is probably the most enterprise solution for serialization we have.
-It supports various dataformats throught a ton of different data format modules.
-The examples above are all created with jackson
+  Jackson ist wahrscheinlich die beste Unternehmenslösung für die Serialisierung, die wir haben.
+  Sie unterstützt verschiedene Datenformate durch eine Vielzahl unterschiedlicher Datenformatmodule.
+  Die Beispiele oben sind alle mit Jackson erstellt worden
 - **[GSON](https://github.com/google/gson)**  
-Gson is the library most know for json.
-It is bundled in spigot and paper and used for a ton of applications there.
-Like the name says it only support JSON
+  Gson ist die bekannteste Bibliothek für json.
+  Sie ist in Spigot und Paper gebündelt und wird dort für eine Vielzahl von Anwendungen verwendet.
+  Wie der Name schon sagt, unterstützt sie nur JSON
 
-I settled for jackson since it is the most flexible framework, widely used and has actually great documentation.
+Ich habe mich für jackson entschieden, weil es das flexibelste Framework ist, weit verbreitet ist und eine gute Dokumentation hat.
 
-## Obtaining jackson bukkit
+## Jackson bukkit integrieren
 
 ![Maven Central](https://img.shields.io/maven-central/v/de.eldoria.jacksonbukkit/jackson-bukkit)
 
-Jackson bukkit is located in Maven Central. You can import it into your project with gradle or maven.
+Jackson bukkit befindet sich in Maven Central. Du kannst es mit gradle oder maven in dein Projekt importieren.
 
 === "gradle"
 
@@ -181,11 +180,11 @@ Jackson bukkit is located in Maven Central. You can import it into your project 
     Please only use the module you need depending on your server version
 
 
-## Module Creation
+## Module erstellen
 
-You can either build the `JacksonBukkit` and `JacksonPaper` modules directly, or use the builder for easy modification.
-Use of the builder is recommended.
-The builder for bukkit and paper can both be accessed via the corresponding class.
+Du kannst die Module `JacksonBukkit` und `JacksonPaper` entweder direkt bauen oder den Builder für einfache Änderungen verwenden.
+Die Verwendung des Builders wird empfohlen.
+Der Builder für bukkit und paper kann über die entsprechende Klasse aufgerufen werden.
 
 === "Creating a Spigot Module"
 
@@ -203,36 +202,36 @@ The builder for bukkit and paper can both be accessed via the corresponding clas
         .build();
     ```
 
-Of course you can also use TOML or YAML or whatever else Jackson supports.
+Du kannst natürlich auch TOML oder YAML oder was immer Jackson sonst noch unterstützt, verwenden.
 
-The module builder also has more configuration options, which can be found [here](https://github.com/eldoriarpg/jackson-bukkit#more-customization).
+Der Modul-Builder hat außerdem weitere Konfigurationsoptionen, die du [hier](https://github.com/eldoriarpg/jackson-bukkit#more-customization) findest.
 
-## Difference between Paper and Bukkit module
+## Unterschied zwischen Paper- und Bukkit-Modul
 
-The paper module tries to support all the features available in paper.
-The deserialiser will automatically detect the current format when using a legacy format and convert it to the new format when saving.
-Therefore, a config created on 1.15 will contain the legacy map, and once the server is running on 1.16, the byte array will be used instead.
+Das Paper-Modul versucht, alle Funktionen zu unterstützen, die in Paper verfügbar sind.
+Der Deserialisierer erkennt automatisch das aktuelle Format, wenn ein altes Format verwendet wird, und wandelt es beim Speichern in das neue Format um.
+Daher wird eine auf 1.15 erstellte Konfiguration die Legacy-Map enthalten, und sobald der Server auf 1.16 läuft, wird stattdessen das Byte-Array verwendet.
 
-Paper serialises `ItemStack` to a base64 encoded byte array instead of using spigots serialisation.
-This will only work on paper servers on 1.16 or later, not on spigot servers.
-The builder allows you to use spigots serialisation on paper servers, but this is not recommended.
+Paper serialisiert `ItemStack` in ein base64-kodiertes Byte-Array, anstatt die Spigots-Serialisierung zu verwenden.
+Dies funktioniert nur auf Paperservern mit Version 1.16 oder höher, nicht auf Spigot-Servern.
+Der Builder erlaubt die Verwendung der Spigots-Serialisierung auf Paperservern, aber das wird nicht empfohlen.
 
-When building a [paper plugin](https://docs.papermc.io/paper/reference/paper-plugins) the `JacksonBukkit` module is no longer able to serialise `ItemStacks`.
-You will need to use `JacksonPaper` in this case, and make sure you are not using legacy serialisation.
+Wenn du ein [Paper-Plugin](https://docs.papermc.io/paper/reference/paper-plugins) baust, kann das Modul `JacksonBukkit` nicht mehr `ItemStacks` serialisieren.
+Du musst in diesem Fall `JacksonPaper` verwenden und sicherstellen, dass du keine Legacy-Serialisierung verwendest.
 
-| Class     | Paper                                                                   | Spigot         |
-|-----------|-------------------------------------------------------------------------|----------------|
-| Color     | RGB or HEX RGB < 1.19 <= RGBA or HEX RGBA                               | RGB or HEX RGB |
-| ItemStack | legacy Map < 1.16 <= NBT byte array                                     | Legacy Map     |
-| Component | MiniMessage String when MiniMessages is present. Otherwise Json Object. | Nope c:        |
+| Class     | Paper                                                                      | Spigot           |
+|-----------|----------------------------------------------------------------------------|------------------|
+| Color     | RGB oder HEX RGB < 1.19 <= RGBA oder HEX RGBA                              | RGB oder HEX RGB |
+| ItemStack | legacy Map < 1.16 <= NBT byte array                                        | Legacy Map       |
+| Component | MiniMessage String wenn MiniMessages vorhanden ist. Ansonsten Json Object. | Nope c:          |
 
-In general, all classes that implement or have implemented the `ConfigurationSerializable' interface are supported.
-A complete list of supported classes can be found [here](https://github.com/eldoriarpg/jackson-bukkit#supported-classes).
+Im Allgemeinen werden alle Klassen unterstützt, die die Schnittstelle "ConfigurationSerializable" implementieren oder implementiert haben.
+Eine vollständige Liste der unterstützten Klassen findest du [hier](https://github.com/eldoriarpg/jackson-bukkit#supported-classes).
 
-## Creating your first configuration file
+## Erstellen deiner ersten Konfigurationsdatei
 
-We want to store player homes for our first config file.
-To do this, we create a base class called `Homes`, which holds a map of `PlayerHomes` with one entry per player.
+Für unsere erste Konfigurationsdatei wollen wir die Häuser der Spieler speichern.
+Dazu erstellen wir eine Basisklasse namens `Homes`, die eine Karte der `PlayerHomes` mit einem Eintrag pro Spieler enthält.
 
 
 <details>
@@ -259,7 +258,7 @@ public class Homes {
 
 </details>
 
-The `PlayerHomes` class is the same just with a map containing the names of the homes.
+Die Klasse `PlayerHomes` ist die gleiche, nur mit einer Karte, die die Namen der Häuser enthält.
 
 <details>
 <summary>PlayerHomes</summary>
@@ -302,24 +301,24 @@ public class PlayerHomes {
 
 </details>
 
-Let's take a look at what we've done here.
+Schauen wir uns an, was wir hier gemacht haben.
 
-We have created two classes that contain the information we need and added some utility methods to get the houses and register new houses.
+Wir haben zwei Klassen erstellt, die die Informationen enthalten, die wir brauchen, und einige Methoden hinzugefügt, um die Häuser abzurufen und neue Häuser zu registrieren.
 
-The most important part is our constructor, which is used to create our instances when we read our configuration file.
-These are the constructors annotated with `@JsonCreator`.
-These classes will be used by jackson.
-After that, we just need to annotate the input fields with their corresponding names using the `@JsonProperty` annotation.
+Der wichtigste Teil ist unser Konstruktor, der verwendet wird, um unsere Instanzen zu erstellen, wenn wir unsere Konfigurationsdatei lesen.
+Dies sind die Konstruktoren, die mit `@JsonCreator` annotiert sind.
+Diese Klassen werden von jackson verwendet.
+Danach müssen wir nur noch die Eingabefelder mit den entsprechenden Namen versehen, indem wir die Annotation `@JsonProperty` verwenden.
 
-That's all we need to do.
+Das ist alles, was wir tun müssen.
 
-## Creating our ObjectMapper
+## Erstellen eines ObjectMappers
 
 ![Maven Central](https://img.shields.io/maven-central/v/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml)
 
-As mentioned earlier, Jackson uses object mapper to map objects from and to our dataformat.
-Since we want to continue using yaml, we need to import the yaml dataformat.
-The latest version is shown above.
+Wie bereits erwähnt, verwendet Jackson Object Mapper, um Objekte von und auf unser Datenformat zu mappen.
+Da wir weiterhin yaml verwenden wollen, müssen wir das yaml-Datenformat importieren.
+Die neueste Version ist oben abgebildet.
 
 === "gradle"
 
@@ -341,7 +340,7 @@ The latest version is shown above.
     </dependencies>
     ```
 
-Once we imported the yaml dataformat we can use it to create an object mapper and configure it.
+Nachdem wir das yaml-Datenformat importiert haben, können wir damit einen Objekt-Mapper erstellen und konfigurieren.
 
 ```java
 ObjectMapper mapper = YAMLMapper.builder().addModule(JacksonPaper.builder().build())
@@ -350,17 +349,17 @@ ObjectMapper mapper = YAMLMapper.builder().addModule(JacksonPaper.builder().buil
         .setVisibility(PropertyAccessor.GETTER, JsonAutoDetect.Visibility.NONE);
 ```
 
-We also configure the mapper to use the fields in our classes and ignore the get prefixed methods.
-This saves us some time and is what you usually want. If you want to exclude a field in your class from being written, you can add the `@JsonIgnore` annotation to it.
+Wir konfigurieren den Mapper auch so, dass er die Felder in unseren Klassen verwendet und die Methoden mit dem Präfix get ignoriert.
+Das spart uns etwas Zeit und ist das, was du normalerweise willst. Wenn du ein Feld in deiner Klasse vom Schreiben ausschließen willst, kannst du die Annotation `@JsonIgnore` hinzufügen.
 
-## Writing our config file
+## Schreiben unserer Konfigurationsdatei
 
-Once you added some data to your homes object we need to write it into a file.
-For that we will use the ObjectMapper we created above and will use it to write it to a file in our plugins directory.
+Nachdem du deinem Homes-Objekt einige Daten hinzugefügt hast, müssen wir sie in eine Datei schreiben.
+Dazu verwenden wir den ObjectMapper, den wir oben erstellt haben, und schreiben ihn in eine Datei in unserem Plugins-Verzeichnis.
 
 !!! note
 
-    I created some sample data here after creating my homes instance.
+    Ich habe hier einige Beispieldaten erstellt, nachdem ich die Instanz meiner Häuser angelegt habe.
 
 ```java
 ObjectMapper mapper = YAMLMapper.builder().addModule(JacksonPaper.builder().build())
@@ -373,17 +372,16 @@ mapper.writeValue(plugin.getDataFolder().toPath().resolve("homes.yml").toFile(),
 
 !!! warning
 
-    Handle the IOException properly
+    Behandle die IOException richtig
 
 !!! note
 
-    You should cache your ObjectMapper and reuse it instead of creating it again on every usage.
+    Du solltest deinen ObjectMapper zwischenspeichern und wiederverwenden, anstatt ihn bei jeder Verwendung neu zu erstellen.
 
 
-And now we have written our homes object as a yaml file directly to disk.
+Und jetzt haben wir unser Homes-Objekt als yaml-Datei direkt auf die Festplatte geschrieben.
 
-Our config file looks something like this:
-
+Unsere Konfigurationsdatei sieht ungefähr so aus:
 
 <details>
 <summary>homes.yml</summary>
@@ -433,12 +431,12 @@ playerHomes:
 
 </details>
 
-You can see that the location has been automatically broken down into a nice readable format.
-Worlds are stored with their uid and name for readability.
+Du kannst sehen, dass der Standort automatisch in ein gut lesbares Format umgewandelt wurde.
+Die Welten werden mit ihrer uid und ihrem Namen gespeichert, damit sie besser lesbar sind.
 
-## Reading our configuration file
+## Lesen unserer Konfigurationsdatei
 
-Reading the configuration file is as simple as writing it.
+Das Lesen der Konfigurationsdatei ist so einfach wie das Schreiben.
 
 ```java
 ObjectMapper mapper = YAMLMapper.builder().addModule(JacksonPaper.builder().build())
@@ -449,7 +447,7 @@ ObjectMapper mapper = YAMLMapper.builder().addModule(JacksonPaper.builder().buil
 Homes homes = mapper.readValue(plugin.getDataFolder().toPath().resolve("homes.yml").toFile(), Homes.class);
 ```
 
-If the file doesn't exist it will fail, so you might want to add an existence check and create an empty config file:
+Wenn die Datei nicht existiert, schlägt sie fehl. Deshalb solltest du eine Existenzprüfung hinzufügen und eine leere Konfigurationsdatei erstellen:
 
 ```java
 File homesFile = plugin.getDataFolder().toPath().resolve("homes.yml").toFile();
@@ -457,14 +455,14 @@ if (!homesFile.exists()) mapper.writeValue(homesFile, new Homes());
 Homes homes = mapper.readValue(homesFile, Homes.class);
 ```
 
-## Using a config wrapper for configuration files
+## Verwendung eines Config-Wrappers für Konfigurationsdateien
 
 ![Maven Central](https://img.shields.io/maven-central/v/de.eldoria.util/jackson-configuration)
 
-Of course, this can all be done much more easily.
-I have written a wrapper that allows easy handling of configuration files with jackson.
+Natürlich lässt sich das alles auch viel einfacher machen.
+Ich habe einen Wrapper geschrieben, der die einfache Handhabung von Konfigurationsdateien mit jackson ermöglicht.
 
-It is also available in Maven Central and can be imported with maven or gradle:
+Er ist auch in Maven Central verfügbar und kann mit Maven oder Gradle importiert werden:
 
 === "gradle"
 
@@ -486,16 +484,16 @@ It is also available in Maven Central and can be imported with maven or gradle:
     </dependencies>
     ```
 
-The jackson configuration wrapper is designed to handle multiple files, with one file set as the default, aka main configuration file.
-Configuration files are defined using `ConfigKeys` which provide a human readable name, path to the file and also a default value for the class.
+Der Jackson-Konfigurations-Wrapper ist so konzipiert, dass er mit mehreren Dateien umgehen kann, wobei eine Datei als Standardkonfigurationsdatei festgelegt ist.
+Konfigurationsdateien werden mit `ConfigKeys` definiert, die einen menschenlesbaren Namen, den Pfad zur Datei und einen Standardwert für die Klasse enthalten.
 
-The config key for our homes file would look like this `ConfigKey.of("homes", Path.of("homes.yml"), Homes.class, Homes::new)`.
-First we define the human readable name, which is `homes`, followed by the path within the plugin directory.
-Then we pass the class and a default value if the file doesn't exist yet.
+Der Konfigurationsschlüssel für unsere Homes-Datei würde wie folgt aussehen: `ConfigKey.of("homes", Path.of("homes.yml"), Homes.class, Homes::new)`.
+Zuerst legen wir den lesbaren Namen fest, nämlich `Homes`, gefolgt vom Pfad im Plugin-Verzeichnis.
+Dann übergeben wir die Klasse und einen Standardwert, falls die Datei noch nicht existiert.
 
-The default key for the `config.yml` can be created a bit easier with `ConfigKey.defaultConfig(Configuration.class, Configuration::new)`.
+Der Standardschlüssel für die `config.yml` kann etwas einfacher mit `ConfigKey.defaultConfig(Configuration.class, Configuration::new)` erstellt werden.
 
-The quickest way to access our files is to simply create an instance of `JacksonConfig` and pass it our homes file as the default configuration.
+Der schnellste Weg, auf unsere Dateien zuzugreifen, ist, einfach eine Instanz von `JacksonConfig` zu erstellen und ihr unsere Homes-Datei als Standardkonfiguration zu übergeben.
 
 ```java
 // Create the config key for our homes file
@@ -515,12 +513,12 @@ config.save();
 config.save(homesKey);
 ```
 
-The library takes care of the creation of our file and also allows us to easily save and retrieve it.
+Die Bibliothek kümmert sich um die Erstellung unserer Datei und ermöglicht es uns auch, sie einfach zu speichern und abzurufen.
 
-To load other files you just need to create a new `ConfigKey` and call `JacksonConfig#secondary(ConfigKey)` with it.
+Um andere Dateien zu laden, musst du nur einen neuen `ConfigKey` erstellen und `JacksonConfig#secondary(ConfigKey)` damit aufrufen.
 
-However, the nicer way is to create your own class based on the JacksonConfig class.
-You can also add a config.yml and use that as the main configuration and your homes file as the secondary configuration.
+Der schönere Weg ist jedoch, eine eigene Klasse zu erstellen, die auf der JacksonConfig-Klasse basiert.
+Du kannst auch eine config.yml hinzufügen und diese als Hauptkonfiguration und deine Homes-Datei als Sekundärkonfiguration verwenden.
 
 ```java
 public class Configuration extends JacksonConfig<General> {
@@ -564,13 +562,13 @@ try (var temp = configuration.homesWrapped()) {
 }
 ```
 
-The wrapped method allows you to get the config wrapper into an auto closable, which will automatically save the file once the block is left.
+Die Wrapped-Methode ermöglicht es dir, den Config-Wrapper in ein Auto-Closable zu bekommen, das die Datei automatisch speichert, sobald der Block verlassen wird.
 
-## Migrating from ConfigurationSerializable
+## Migration von ConfigurationSerializable
 
-If you have used bukkit serialisation before, it is quite easy to use your new objects.
-All you need to do is mark your constructor as the json creator and remove the old map constructor.
-Of course, make sure that your users have already migrated before you remove the constructor completely from your project c:
+Wenn du die Bukkit-Serialisierung bereits benutzt hast, ist es ganz einfach, deine neuen Objekte zu verwenden.
+Alles, was du tun musst, ist, deinen Konstruktor als json-Ersteller zu markieren und den alten Map-Konstruktor zu entfernen.
+Natürlich solltest du sicherstellen, dass deine Nutzer bereits migriert sind, bevor du den Konstruktor vollständig aus deinem Projekt entfernst:
 
 ```diff
 -public final class PersonCS implements ConfigurationSerializable {
@@ -640,12 +638,12 @@ Of course, make sure that your users have already migrated before you remove the
  }
 ```
 
-Instead of creating a constructor for your classes, you can also use the fields to map values.
-I just prefer constructors because they are less hacky than reflection stuff.
+Anstatt einen Konstruktor für deine Klassen zu erstellen, kannst du auch die Felder verwenden, um Werte zuzuordnen.
+Ich bevorzuge Konstruktoren, weil sie weniger hakelig sind als Reflection-Kram.
 
-## Thank you!
+## Danke!
 
-Thank you for sticking with me so far.
-You can now easily create configuration files with jackson and use them in your plugins!
+Danke, dass du mir bis jetzt gefolgt bist.
+Du kannst jetzt ganz einfach Konfigurationsdateien mit jackson erstellen und sie in deinen Plugins verwenden!
 
-{{ blog_footer_en }}
+{{ blog_footer_de }}
