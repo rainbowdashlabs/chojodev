@@ -59,6 +59,7 @@ nav:
   - 'More':
       - more/index.md
       - 'Sql Java Tutorial': more/sql_java.md
+  - Imprint: imprint.md
 
 theme:
   logo: assets/images/logo.png
