@@ -16,7 +16,7 @@ COPY templates templates
 
 COPY Pipfile Pipfile.lock /docs/
 
-RUN pipenv install
+RUN pipenv sync
 
 COPY docs/ docs/
 
