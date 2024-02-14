@@ -25,18 +25,18 @@ If you are not familiar with gradle yet, have a look at my previous post about [
 
 ## Project Setup
 
-We have two projects which are named `ProjectA` and `ProjectB` for simplicity.
-In the end `ProjectA` will implement code and functions that are used by `ProjectB`.
+We have two projects which are named `Project A` and `Project B` for simplicity.
+In the end `Project A` will implement code and functions that are used by `Project B`.
 
 Since this is the more complex setup we're going to start with this.
 
-### ProjectA - The Provider
+### Project A - The Provider
 
-`ProjectA` will provide code accessed by `ProjectB`.
+`Project A` will provide code accessed by `Project B`.
 That means we need to do several things:
 
-- Create a new gradle project named `ProjectA`
-- Add some logic/code to it, that we want to use in `ProjectB`
+- Create a new gradle project named `Project A`
+- Add some logic/code to it, that we want to use in `Project B`
 - Publish our project into our local maven repository
 
 Let's start with the setup itself. 
@@ -166,11 +166,11 @@ Now that we published our artifacts into our local maven repository we can acces
 
 !!! warning
     
-    If you send your `ProjectB` to someone else they need to execute the `publishToMavenLocal` task themself on `ProjectA`.
+    If you send your `Project B` to someone else they need to execute the `publishToMavenLocal` task themself on `Project A`.
     To properly share dependencies you should use [remote repositories](#remote-repositories).
     The local maven repository should only be used for debugging and general testing of your project.
 
-First we create our basic project setup again like we did on `ProjectA`.
+First we create our basic project setup again like we did on `Project A`.
 
 === "build.gradle.kts"
 
@@ -213,10 +213,11 @@ First we create our basic project setup again like we did on `ProjectA`.
     }
     ```
 
-Now we get to importing our `ProjectA`.
+Now we get to importing our `Project A`.
 For that we need to do three things:
+
 1. Add `mavenLocal()` as a repository.
-2. Configure our java task to use the same or a newer toolchain version than `ProjectA`.
+2. Configure our java task to use the same or a newer toolchain version than `Project A`.
 3. Add our project as a dependency
 
 !!! note
@@ -241,7 +242,7 @@ dependencies {
 }
 ```
 
-Now we can go into our `ProjectB` class, create a new instance of our `ProjectA` class and call the meow method.
+Now we can go into our `Project B` class, create a new instance of our `Project A` class and call the meow method.
 
 ```java
 package dev.chojo.projectb;
@@ -257,12 +258,13 @@ public class ProjectB {
 
 If we run our main method now we can see that "meow" get printed out.
 
-While this works in our IDE, it will not work when we actually build `ProjectB` and execute our `ProjectB` jar.
+While this works in our IDE, it will not work when we actually build `Project B` and execute our `Project B` jar.
 
 This has two reasons:
+
 1. We did not define our main class anywhere.
-2. Our IDE does imports `ProjectA` into our class path, since we imported it as `implementation`.
-   When we build our IDE can no longer import it and gradle assumes that we will add `ProjectA` ourselves to the classpath.
+2. Our IDE does imports `Project A` into our class path, since we imported it as `implementation`.
+   When we build our IDE can no longer import it and gradle assumes that we will add `Project A` ourselves to the classpath.
    To fix this we can either use the [shadow](https://imperceptiblethoughts.com/shadow/introduction/) plugin or the [application](https://docs.gradle.org/current/userguide/application_plugin.html) plugin.
    Configure either of them as described in the documentation
 

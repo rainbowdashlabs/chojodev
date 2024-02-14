@@ -11,7 +11,7 @@ categories:
   - spigot
 ---
 
-# Sharing and Publishing Dependencies with Gradle
+# Teilen und Veröffentlichen von Abhängigkeiten mit Gradle
 
 [English Version](../posts/gradle_sharing_dependencies.md)
 
@@ -22,20 +22,20 @@ Wir werfen auch einen kurzen Blick auf Online-Repositories und die kleinen Extra
 Wenn du noch nicht mit Gradle vertraut bist, wirf einen Blick auf meinen vorherigen Beitrag über [gradle basics](gradle_minecraft_basic_and_advanced.md).
 <!-- more -->
 
-## Project Setup
+## Projekt Aufsetzen
 
-Wir haben zwei Projekte, die wir der Einfachheit halber `ProjektA` und `ProjektB` nennen.
-Am Ende wird `ProjektA` Code und Funktionen implementieren, die von `ProjektB` verwendet werden.
+Wir haben zwei Projekte, die wir der Einfachheit halber `Projekt A` und `Projekt B` nennen.
+Am Ende wird `Projekt A` Code und Funktionen implementieren, die von `Projekt B` verwendet werden.
 
 Da dies das komplexere Projekt ist, fangen wir mit diesem an.
 
-### ProjektA - Die Quelle
+### Projekt A - Die Quelle
 
-`ProjektA` wird Code bereitstellen, auf den `ProjektB` zugreift.
+`Projekt A` wird Code bereitstellen, auf den `Projekt B` zugreift.
 Das bedeutet, dass wir mehrere Dinge tun müssen:
 
-- Erstellen eines neues Gradle-Projekt mit dem Namen `ProjektA`.
-- Logik/Code hinzufügen, den wir in `ProjectB` verwenden wollen.
+- Erstellen eines neues Gradle-Projekt mit dem Namen `Projekt A`.
+- Logik/Code hinzufügen, den wir in `Projekt B` verwenden wollen.
 - Unser Projekt in unserem lokalen Maven-Repository veröffentlichen
 
 Beginnen wir mit dem Setup selbst.
@@ -138,7 +138,7 @@ Hier ist eine Menge passiert, also gehen wir es Schritt für Schritt durch.
 
 Nun können unser Projekt in unser Maven-Lokal veröffentlichen, indem wir den Task `publishToMavenLocal` von Gradle ausführen.
 
-#### Transitive dependencies
+#### Transitive Abhängigkeiten
 
 Wenn deine Api von einer anderen Api abhängt, kannst du dies anderen mitteilen.
 Anstatt `implementation` in deinem `dependencies` Abschnitt zu verwenden, benutzt du `api`.
@@ -164,11 +164,11 @@ Jetzt, wo wir unsere Artefakte in unserem lokalen Maven-Repository veröffentlic
 
 !!! warning "Warnung"
 
-    Wenn du dein `ProjectB` an jemand anderen weitergibst, muss dieser den Task `publishToMavenLocal` selbst auf `ProjectA` ausführen.
+    Wenn du dein `Projekt B` an jemand anderen weitergibst, muss dieser den Task `publishToMavenLocal` selbst auf `Projekt A` ausführen.
     Um Abhängigkeiten richtig zu teilen, solltest du [remote repositories](#remote-repositories) verwenden.
     Das lokale Maven-Repository sollte nur für das Debugging und allgemeine Tests deines Projekts verwendet werden.
 
-Als Erstes erstellen wir erneut unser grundlegendes Projekt-Setup wie bei `ProjektA`.
+Als Erstes erstellen wir erneut unser grundlegendes Projekt-Setup wie bei `Projekt A`.
 
 === "build.gradle.kts"
 
@@ -211,10 +211,11 @@ Als Erstes erstellen wir erneut unser grundlegendes Projekt-Setup wie bei `Proje
     }
     ```
 
-Jetzt importieren wir unser `ProjektA`.
+Jetzt importieren wir unser `Projekt A`.
 Dafür müssen wir drei Dinge tun:
+
 1. `mavenLocal()` als Repository hinzufügen.
-2. Unseren Java Task so konfigurieren, dass er die gleiche oder eine neuere Java-Version als `ProjectA` verwendet.
+2. Unseren Java Task so konfigurieren, dass er die gleiche oder eine neuere Java-Version als `Projekt A` verwendet.
 3. Unser Projekt als Abhängigkeit hinzufügen
 
 !!! Hinweis
@@ -239,7 +240,7 @@ dependencies {
 }
 ```
 
-Jetzt können wir in unsere Klasse `ProjektB` gehen, eine neue Instanz unserer Klasse `ProjektA` erstellen und die Methode `meow` aufrufen.
+Jetzt können wir in unsere Klasse `Projekt B` gehen, eine neue Instanz unserer Klasse `Projekt A` erstellen und die Methode `meow` aufrufen.
 
 ```java
 package dev.chojo.projectb;
@@ -255,12 +256,13 @@ public class ProjectB {
 
 Wenn wir jetzt unsere Hauptmethode ausführen, können wir sehen, dass `meow` ausgegeben wird.
 
-Während dies in unserer IDE funktioniert, wird es nicht funktionieren, wenn wir tatsächlich `ProjektB` bauen und unsere `ProjektB` jar ausführen.
+Während dies in unserer IDE funktioniert, wird es nicht funktionieren, wenn wir tatsächlich `Projekt B` bauen und unsere `Projekt B` jar ausführen.
 
 Das hat zwei Gründe:
+
 1. Wir haben unsere Main Class nirgendwo definiert.
-2. Unsere IDE importiert `ProjektA` in unseren Klassenpfad, da wir es als `implementation` importiert haben.
-   Wenn wir bauen, kann unsere IDE es nicht mehr importieren und Gradle geht davon aus, dass wir `ProjektA` selbst zum Klassenpfad hinzufügen werden.
+2. Unsere IDE importiert `Projekt A` in unseren Klassenpfad, da wir es als `implementation` importiert haben.
+   Wenn wir bauen, kann unsere IDE es nicht mehr importieren und Gradle geht davon aus, dass wir `Projekt A` selbst zum Klassenpfad hinzufügen werden.
    Um dies zu beheben, können wir entweder das [shadow](https://imperceptiblethoughts.com/shadow/introduction/) Plugin oder das [application](https://docs.gradle.org/current/userguide/application_plugin.html) Plugin verwenden.
    Konfiguriere eines der beiden Plugins wie in der Dokumentation beschrieben
 
