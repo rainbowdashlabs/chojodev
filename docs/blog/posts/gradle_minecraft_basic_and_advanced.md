@@ -44,7 +44,7 @@ This is why it has its own version.
 To update this version you only need one command:
 
 ```shell
-./gradlew wrapper --gradle-version=8.2.1 --distribution-type=bin
+./gradlew wrapper --gradle-version=8.7 --distribution-type=bin
 ```
 
 This works on Unix systems as well as in Windows PowerShell or git bash.
