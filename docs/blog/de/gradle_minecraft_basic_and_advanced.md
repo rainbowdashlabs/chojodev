@@ -43,7 +43,7 @@ Deshalb hat er seine eigene Version.
 Um diese Version zu aktualisieren, brauchst du nur einen Befehl:
 
 ```shell
-./gradlew wrapper --gradle-version=8.2.1 --distribution-type=bin
+./gradlew wrapper --gradle-version=8.7 --distribution-type=bin
 ```
 
 Das funktioniert auf Unix-Systemen und auch in der Windows PowerShell oder Git Bash.
