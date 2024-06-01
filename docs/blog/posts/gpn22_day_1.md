@@ -7,7 +7,7 @@ categories:
   - irl
 ---
 
-# GPN Tag 2
+# GPN22 Tag 1 | Die erste GPN
 
 Nach einer morgendlichen Dusche und einem überraschend üppigen Frühstück im Hotel stand noch etwas arbeit an.
 

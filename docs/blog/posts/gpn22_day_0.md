@@ -7,7 +7,6 @@ categories:
   - irl
 ---
 
-
 # GPN22 Tag 0 | Anreise
 
 Da dies meine erste GPN sein wird dachte ich, dass ich meine Erlebnisse gern mal auf meinem Blog festhalten möchte. Vorwiegend als experiment für mich.
