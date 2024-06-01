@@ -5,6 +5,7 @@ authors:
 categories:
   - gpn22
   - irl
+draft: true
 ---
 
 # GPN22 Tag 3
@@ -22,4 +23,6 @@ Eine neue Runde am Stickertisch bescherte mir wieder ein paar Neuzugänge und ei
 Eigentlich wollte ich den darauffolgenden Talk über Rest in the Cloud sehen, aber die Stühle haben mir echt Rückenschmerzen verursacht. Und nachdem ich die Schlange beim Herausgehen gesehen habe, war bereits klar, dass ich definitiv nicht wieder reinkomme, jetzt wo ich den Saal verlassen hatte. Also ging es zurück zum Platz. Blog schreiben, reden und noch mehr. Gegenüber haben sich außerdem eine Familie us Koblenz niedergelassen, mit denen wir am letzten Abend schon etwas Kontakt hatten. Die begeisterung der beiden Jungs mir gegenüber, während sie ihren Bot (Ich vermute für das Snake Battle hier vor Ort) beim gelegentlichen Gewinnen zujubelten war wirklich wundervoll.
 
 Der Talk über die ePA war mit Abstand einer der besten Talks bisher. Ich wünschte, ich hätte so einen technisch Interessierten und offenen Hausarzt. Die behandelten Themen fühlten sich spot on an und auch für mich habe ich eine Menge mitgenommen and möglichen "Krankheitsbildern", die eigentlich gar keine sind und eher gesellschaftlich so behandelt werden. Ich kann wirklich nur empfehlen diesen Talk online nachzuschauen wenn möglich. Auch wenn gegen Ende etwas abgedriftet wurde, fand ich konzepte wie informationelle Krankheit super interessant und sollten allgemein mehr Aufmerksamkeit erhalten.
+
+
 
