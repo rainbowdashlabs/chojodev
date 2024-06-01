@@ -10,12 +10,15 @@ categories:
 # GPN22 Tag 2 | Balkonkraftwerke und andere Pfuschereien
 
 Der zweite Tag begann früh um halb 9. Nach einer schnellen Dusche und einem ausgiebigen Frühstück ging es schon um kurz vor 10 los zur GPN. Unsere Sitzplätze waren leider bereits belegt und nur noch unser Haufen an Campingstühlen zeugte von unserer Existenz an diesem Ort.
+<!-- more -->
 
 Spontan nahmen wir zu zweit den noch freien Tisch des Koblenzer Hackerspace ein, die uns netterweise Asyl gewährten während ich struggelte eine meiner Minecraft Plugins in eine Library zu verwandeln und irgendwie zu verstehen was FAWE mal wieder da treibt.
 
 Um 12 stand dann ein super informativer Talk über Balkonkraftwerke an. Eine wunderbare präsentation kombiniert mit einem super freien und actually mitreißenden Vortrag. Und das, obwohl es um gesetzestexte, langsame Politik und Ministerien ging. Für mich steht damit erneut fest, dass ich mir definitiv ein Balkonkraftwerk besorgen werde, sobald die Gesetzesänderung durch ist, dass mein Vermieter mir erlauben muss eines anzubringen.
 
 Nach dem Talk ging es erneut zum Stickertisch und ich erbeutete noch ein Cuttermesser, um die Ränder sauber abzuschneiden. Mittlerweile ist er relativ voll. Vielleicht denke ich ja daran, hier noch ein Bild einzufügen.
+
+![A picture of a laptop with a lots of stickers](/assets/images/gpn22_laptop_day_2.jpg){ width="800" }
 
 Danach ging es mit ein bisschen code Pfuscherei für das KIT CTFi weiter. Ich schrieb das erste Mal PHP Code und bin froh mit dieser Sprache offensichtlich nichts verpasst zu haben. Nach ein paar frustrierenden Anlaufen nach einem guten Start und einem Multithreaded Approach mittels Bash Script gehts zu einem neuen Talk. Diesmal über Computer bauen. In dem Fall ein 8 Bit Computer mit Relais. Nach einer recht trockenen aber auch informativen Einführung wurde doch tatsächlich ein 8 Bit "Computer" zusammen gebaut. Und das Klicken der Relais löste nach 30 minuten Talk und Graphen doch schon eine gewisse Euphorie im Raum aus. Eine bessere Zielgruppe für so etwas gibt es vermutlich nicht. Gib einer Gruppe von Technikbegeisterten etwas was sie mit blinkenden Lichtern sehen und durch Klicken hören können und du hast alles, was du brauchst.
 

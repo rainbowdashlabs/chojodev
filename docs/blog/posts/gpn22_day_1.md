@@ -12,6 +12,7 @@ categories:
 Nach einer morgendlichen Dusche und einem überraschend üppigen Frühstück im Hotel stand noch etwas arbeit an.
 
 Während Freunde bereits Bilder von der noch nicht ganz so startbereiten GPN schicken und plätze reserviert haben für uns, saß ich in meinem Hotelzimmer und löste noch ein paar Probleme an der Arbeit und fasste den Entschluss wirklich einen Blog über meine GPN Erlebnisse zu schreiben.
+<!-- more -->
 
 Um 14 Uhr kam meine Begleitung dann im selben Hotel an und nach einem kurzen Hallo un der Übergabe meines alten Laptops für die GPN ging es dann auch schon los mit der Tram. Die zwei stationen hätte man auch einfach laufen können, aber gut. Spontan natürlich an der weniger optimalen Haltestelle ausgestiegen gabs noch einen kleinen Fußweg, bis ich endlich das Gebäude erblickte, in dem ich mich die nächsten Tage vermutlich vorwiegend aufhalten werde.
 

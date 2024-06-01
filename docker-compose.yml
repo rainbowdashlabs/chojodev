@@ -9,7 +9,7 @@ services:
     build:
       dockerfile: dev.Dockerfile
     ports:
-      - "80:80"
+      - "8888:80"
     profiles:
       - dev
 
@@ -17,6 +17,6 @@ services:
     build:
       dockerfile: Dockerfile
     ports:
-      - "80:80"
+      - "8888:80"
     profiles:
       - prod
