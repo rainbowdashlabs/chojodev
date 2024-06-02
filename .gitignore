@@ -279,3 +279,4 @@ pip-selfcheck.json
 
 # Ignore Gradle build output directory
 build
+.direnv
