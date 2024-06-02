@@ -29,7 +29,7 @@ Ich setzte mir meine Kopfhörer auf und trat zu "Born this way" als Nightcore ve
 Beim Schreiben dieses Posts und dem Blick zurück auf das Wochenende kommt tatsächlich auch ein Tränchen. Ich bin glücklich, dass ich dabei war, aber definitiv auch traurig, dass es schon vorbei ist. Die vier Tage gingen super schnell vorbei. Wenn ich aber so in mich hinein fühle, hätte ich vermutlich keinen 5. Tag mehr mitgemacht. Ich bin müde und meine Social Battery war schon lange nicht mehr so leer wie sie gerade ist.
 
 Mein Framework hat mittlerweile kaum mehr einen freien Platz und ich liebe einfach wie das geendet ist. Es wird mich immer an dieses schöne Wochenende erinnern.
-![A picture of a laptop with a lots of stickers](/assets/images/gpn22_laptop_day_4.jpg){ width="800" }
+![A picture of a laptop with a lots of stickers](../../assets/images/gpn22_laptop_day_4.jpg){ width="800" }
 
 Natürlich wäre die ganze GPN nichts ohne Entropia und die ganzen Trolle die überall geholfen haben. Für mich ist klar, dass ich nächstes Jahr definitiv auch Trollen möchte um etwas zurückzugeben.
 
