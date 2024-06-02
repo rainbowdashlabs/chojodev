@@ -29,7 +29,9 @@ Nach diesem erfolgreichen Update war es endlich Zeit zum Essen. Durchaus verdien
 
 Nach weiteren Gesprächen und dem Verbreiten von Nix Propaganda habe ich natürlich den Beginn der Nix Meetups verpasst. Ich hab mich dann dennoch mit Duckie in das Meetup geschlichen und ein paar Sticker ergattert. Die Luft da drin war jedoch so warm und Stickig, dass ich nicht wirklich lange ausgehalten hab. War wohl Nix.
 
-Also wieder zurück zum Platz und die erhaltene Nix Sticker auf dem Laptop anbringen. Das war so ziemlich mein absoluter Milestone den ich erreichen wollte. Zurück am Platz stellte sich heraus, dass die Person mir gegenüber auch bei der Feuerwehr ist und es entspannte sich ein recht langes und unterhaltsames Gespräch über dies und das. Grüße gehen raus an der Stelle, wenn du das liest!
+Also wieder zurück zum Platz und die erhaltene Nix Sticker auf dem Laptop anbringen. Das war so ziemlich mein absoluter Milestone den ich erreichen wollte. Außerdem stellte sich heraus, dass die Person mir gegenüber auch bei der Feuerwehr ist und es entspannte sich ein recht langes und unterhaltsames Gespräch über dies und das. Grüße gehen raus an der Stelle, wenn du das liest!
+
+![A picture of a laptop with a lots of stickers](/assets/images/gpn22_laptop_day_3.png){ width="800" }
 
 Im Laufe des weiteren Abends ergatterte ich eines dieser coolen LED Namensschilder, mit denen schon super Viele herumgelaufen sind. Das musste ich das natürlich auch haben. Wir fanden die Entwickler im zweiten Stock, den ich nach dem Nix Meetup jetzt zum zweiten mal betreten hatte. Nach kurzem Suchen wurde uns der Standort der zwei Schöpfer offenbart und für 25€ gabs ein Stück Hardware mit zugehöriger App. Während die App bereits Open Software ist, ist es die Hardware noch nicht, aber man versprach zum Congress da auch nachzubessern.
 
