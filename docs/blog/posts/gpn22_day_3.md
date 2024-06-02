@@ -12,6 +12,7 @@ categories:
 Tag drei begann in etwa genauso wie Tag zwei. Diesmal stand ein Nix Talk am morgen an und daher war später aufstehen nicht wirklich eine Option.
 
 Also aufstehen, duschen, frühstücken und ab zur GPN. Diesmal zu Fuß um zumindest ein bisschen Bewegung zu haben. Angekommen wurde dann erstmal noch schnell der Blog Eintrag für Tag 2 fertig gemacht und hochgeladen.
+<!-- more -->
 
 Der NixOS Talk mit dem Namen "Von Nix kommt Nix" war überraschend informativ und auch super differenziert, was Vor- und Nachteile angeht. Gepaart mit gelegentlichen lachern, obligatorischen Nix Witzen und anderem. Klare empfehlung. Die Flakes erscheinen mir jedoch immer noch wie schwarze Magie. Der Talk selbst war dabei super high Level. Ich hatte anderes erwartet, aber was ich bekommen habe, war auch gut.
 
