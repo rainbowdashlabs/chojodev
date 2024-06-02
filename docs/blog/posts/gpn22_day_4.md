@@ -1,3 +1,12 @@
+---
+date: 2024-06-02
+authors:
+  - chojo  
+categories:
+  - gpn22
+  - irl
+---
+
 # GPN22 Tag 4 | Das Ende und der Anfang
 
 Der letzte Tag der GPN beginnt wieder früh um halb neun. Obwohl ich super Müde bin, steht jetzt schon fest: Ich komme wieder und hoffentlich wird das der Anfang einer neuen jährlichen Tradition.
@@ -15,6 +24,13 @@ Ich hatte jedoch noch Lust auf ein bisschen Kuchen und Johnny zeigte mir noch da
 
 Ich setzte mir meine Kopfhörer auf und trat zu "Born this way" als Nightcore version meinen Rückweg an zur Tram Station. Und vermutlich gibt dieses Lied auch eine gute Stimmung der GPN wieder. So viele Bunte und unterschiedliche Menschen auf einem Haufen. Jede:r konnte so sein wie man sich fühlte und wer man sein wollte. An wenigen Orten fühlte ich mich tatsächlich so frei persönlich wie auf der GPN. Tatsächlich ein wirklicher Safespace für so viele. In einem Talk wurde auch erwähnt, dass die GPN die vermutlich diverseste Veranstaltung im CCC ist. Ohne je auf einem anderen CCC Event gewesen zu sein, glaube ich das gerne und finde es wundervoll.
 
+
+
 Beim Schreiben dieses Posts und dem Blick zurück auf das Wochenende kommt tatsächlich auch ein Tränchen. Ich bin glücklich, dass ich dabei war, aber definitiv auch traurig, dass es schon vorbei ist. Die vier Tage gingen super schnell vorbei. Wenn ich aber so in mich hinein fühle, hätte ich vermutlich keinen 5. Tag mehr mitgemacht. Ich bin müde und meine Social Battery war schon lange nicht mehr so leer wie sie gerade ist.
+
+Mein Framework hat mittlerweile kaum mehr einen freien Platz und ich liebe einfach wie das geendet ist. Es wird mich immer an dieses schöne Wochenende erinnern.
+![A picture of a laptop with a lots of stickers](/assets/images/gpn22_laptop_day_4.jpg){ width="800" }
+
+Natürlich wäre die ganze GPN nichts ohne Entropia und die ganzen Trolle die überall geholfen haben. Für mich ist klar, dass ich nächstes Jahr definitiv auch Trollen möchte um etwas zurückzugeben.
 
 Jetzt sitze ich in meinem Hotel und werde den Abend noch schön ausklingen lassen. Vielleicht etwas serie schauen, wenn das Internet mitmacht oder vielleicht noch etwas mit meinen Katzenohren durch die Stadt laufen und Musik hören. Aber egal wie ich mich entscheide, eins ist klar. Ich komme nächstes Jahr wieder und ich kann es kaum erwarten.
