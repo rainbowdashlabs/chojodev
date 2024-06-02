@@ -7,7 +7,7 @@ categories:
   - irl
 ---
 
-# GPN22 Tag 3
+# GPN22 Tag 3 | Nix ist ne ganze Menge
 
 Tag drei begann in etwa genauso wie Tag zwei. Diesmal stand ein Nix Talk am morgen an und daher war später aufstehen nicht wirklich eine Option.
 
