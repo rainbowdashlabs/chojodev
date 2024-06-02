@@ -5,7 +5,6 @@ authors:
 categories:
   - gpn22
   - irl
-draft: true
 ---
 
 # GPN22 Tag 3
