@@ -540,7 +540,7 @@ Mehr über Paper Plugins findest du [hier](https://docs.papermc.io/paper/referen
 
 ## Abhängigkeiten in unser Jar shaden
 
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.github.johnrengelman.shadow?label=Version)
+![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.goooler.shadow?label=Version)
 
 Nehmen wir an, SADU befindet sich nicht im Maven Central und wir können den Library Loader nicht verwenden.
 
@@ -550,7 +550,7 @@ In diesem Fall müssen wir ein anderes Plugin namens shadow verwenden. Die aktue
 
 ```java
 plugins {
-  id("com.github.johnrengelman.shadow") version "version" // (1)!
+  id("io.github.goooler.shadow") version "version" // (1)!
 }
 ```
 
