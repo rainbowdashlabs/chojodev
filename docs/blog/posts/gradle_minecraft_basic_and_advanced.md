@@ -540,7 +540,7 @@ More about Paper plugins can be found [here](https://docs.papermc.io/paper/refer
 
 ## Shading dependencies into our jar
 
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.github.johnrengelman.shadow?label=Version)
+![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.goooler.shadow?label=Version)
 
 Let's assume that SADU is not located in Maven Central, and we cannot use the library loader.
 
@@ -550,7 +550,7 @@ In this case we need to use another plugin called shadow. The latest version is 
 
 ```java
 plugins {
-  id("com.github.johnrengelman.shadow") version "version" // (1)!
+  id("io.github.goooler.shadow") version "version" // (1)!
 }
 ```
 
