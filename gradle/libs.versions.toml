@@ -6,7 +6,7 @@ guava = "32.1.3-jre"
 commons-math3 = { group = "org.apache.commons", name = "commons-math3", version.ref = "commons-math3" }
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 paper = { group = "io.papermc.paper", name = "paper-api", version = "1.21.1-R0.1-SNAPSHOT" }
-sadu = { group = "de.chojo.sadu", name = "sadu", version = "1.3.1" }
+sadu = { group = "de.chojo.sadu", name = "sadu", version = "1.4.1" }
 
 [plugins]
 jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.22" }
