@@ -150,9 +150,9 @@ Jackson bukkit is located in Maven Central. You can import it into your project 
     ```java
     dependencies {
         // Spigot server
-        implementation("de.eldoria.jacksonbukkit", "bukkit", "version")
+        implementation("de.eldoria.jacksonbukkit", "bukkit", "{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}")
         // Paper server
-        implementation("de.eldoria.jacksonbukkit", "paper", "version")
+        implementation("de.eldoria.jacksonbukkit", "paper", "{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}")
     }
     ```
 
@@ -164,14 +164,14 @@ Jackson bukkit is located in Maven Central. You can import it into your project 
         <dependency>
             <groupId>de.eldoria.jacksonbukkit</groupId>
             <artifactId>spigot</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}</version>
         </dependency>
     
         <!-- Paper Server-->
         <dependency>
             <groupId>de.eldoria.jacksonbukkit</groupId>
             <artifactId>paper</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}</version>
         </dependency>
     </dependencies>
     ```
@@ -315,8 +315,6 @@ That's all we need to do.
 
 ## Creating our ObjectMapper
 
-![Maven Central](https://img.shields.io/maven-central/v/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml)
-
 As mentioned earlier, Jackson uses object mapper to map objects from and to our dataformat.
 Since we want to continue using yaml, we need to import the yaml dataformat.
 The latest version is shown above.
@@ -325,7 +323,7 @@ The latest version is shown above.
 
     ```java
     dependencies {
-        implementation("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "version")
+        implementation("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "{{ VC_LIBRARY_JACKSON_YAML_VERSION }}")
     }
     ```
 
@@ -336,7 +334,7 @@ The latest version is shown above.
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSON_YAML_VERSION }}</version>
         </dependency>
     </dependencies>
     ```
@@ -459,8 +457,6 @@ Homes homes = mapper.readValue(homesFile, Homes.class);
 
 ## Using a config wrapper for configuration files
 
-![Maven Central](https://img.shields.io/maven-central/v/de.eldoria.util/jackson-configuration)
-
 Of course, this can all be done much more easily.
 I have written a wrapper that allows easy handling of configuration files with jackson.
 
@@ -470,7 +466,7 @@ It is also available in Maven Central and can be imported with maven or gradle:
 
     ```java
     dependencies {
-        implementation("de.eldoria.jacksonbukkit", "jackson-configuration", "version")
+        implementation("de.eldoria.jacksonbukkit", "jackson-configuration", "{{ VC_LIBRARY_ELDOUTIL_VERSION }}")
     }
     ```
 
@@ -481,7 +477,7 @@ It is also available in Maven Central and can be imported with maven or gradle:
         <dependency>
             <groupId>de.eldoria.jacksonbukkit</groupId>
             <artifactId>jackson-configuration</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_ELDOUTIL_VERSION }}</version>
         </dependency>
     </dependencies>
     ```

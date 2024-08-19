@@ -140,7 +140,7 @@ Ich habe mich für jackson entschieden, weil es das flexibelste Framework ist, w
 
 ## Jackson bukkit integrieren
 
-![Maven Central](https://img.shields.io/maven-central/v/de.eldoria.jacksonbukkit/jackson-bukkit)
+![Maven Central](https://img.shields.io/maven-central/v/{{ VC_LIBRARY_JACKSONBUKKIT_GROUP }}/jackson-bukkit)
 
 Jackson bukkit befindet sich in Maven Central. Du kannst es mit gradle oder maven in dein Projekt importieren.
 
@@ -149,9 +149,9 @@ Jackson bukkit befindet sich in Maven Central. Du kannst es mit gradle oder mave
     ```java
     dependencies {
         // Spigot server
-        implementation("de.eldoria.jacksonbukkit", "bukkit", "version")
+        implementation("de.eldoria.jacksonbukkit", "bukkit", "{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}")
         // Paper server
-        implementation("de.eldoria.jacksonbukkit", "paper", "version")
+        implementation("de.eldoria.jacksonbukkit", "paper", "{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}")
     }
     ```
 
@@ -163,14 +163,14 @@ Jackson bukkit befindet sich in Maven Central. Du kannst es mit gradle oder mave
         <dependency>
             <groupId>de.eldoria.jacksonbukkit</groupId>
             <artifactId>spigot</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}</version>
         </dependency>
     
         <!-- Paper Server-->
         <dependency>
             <groupId>de.eldoria.jacksonbukkit</groupId>
             <artifactId>paper</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSONBUKKIT_VERSION }}</version>
         </dependency>
     </dependencies>
     ```
@@ -324,7 +324,7 @@ Die neueste Version ist oben abgebildet.
 
     ```java
     dependencies {
-        implementation("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "version")
+        implementation("com.fasterxml.jackson.dataformat", "jackson-dataformat-yaml", "{{ VC_LIBRARY_JACKSON_YAML_VERSION }}")
     }
     ```
 
@@ -335,7 +335,7 @@ Die neueste Version ist oben abgebildet.
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-yaml</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_JACKSON_YAML_VERSION }}</version>
         </dependency>
     </dependencies>
     ```
@@ -457,8 +457,6 @@ Homes homes = mapper.readValue(homesFile, Homes.class);
 
 ## Verwendung eines Config-Wrappers für Konfigurationsdateien
 
-![Maven Central](https://img.shields.io/maven-central/v/de.eldoria.util/jackson-configuration)
-
 Natürlich lässt sich das alles auch viel einfacher machen.
 Ich habe einen Wrapper geschrieben, der die einfache Handhabung von Konfigurationsdateien mit jackson ermöglicht.
 
@@ -468,7 +466,7 @@ Er ist auch in Maven Central verfügbar und kann mit Maven oder Gradle importier
 
     ```java
     dependencies {
-        implementation("de.eldoria.jacksonbukkit", "jackson-configuration", "version")
+        implementation("de.eldoria.util", "jackson-configuration", "{{ VC_LIBRARY_ELDOUTIL_VERSION }}")
     }
     ```
 
@@ -477,9 +475,9 @@ Er ist auch in Maven Central verfügbar und kann mit Maven oder Gradle importier
     ```xml
     <dependencies>
         <dependency>
-            <groupId>de.eldoria.jacksonbukkit</groupId>
+            <groupId>de.eldoria.util</groupId>
             <artifactId>jackson-configuration</artifactId>
-            <version>version</version>
+            <version>{{ VC_LIBRARY_ELDOUTIL_VERSION }}</version>
         </dependency>
     </dependencies>
     ```

@@ -34,25 +34,22 @@ def _load_templates():
         for key, value in data["libraries"].items():
             group = value["group"]
             name = value["name"]
+            version = value["version"]
             templates[f"VC_LIBRARY_{key.upper()}_GROUP"] = group
             templates[f"VC_LIBRARY_{key.upper()}_NAME"] = name
             templates[f"VC_LIBRARY_{key.upper()}_MODULE"] = f"{group}:{name}"
-            version = None
-            if isinstance(value["version"], str):
-                version = value["version"]
-            elif "ref" in value["version"]:
-                version = versions[value["version"]["ref"]]
+            if "ref" in version:
+                version = versions[version["ref"]]
             templates[f"VC_LIBRARY_{key.upper()}_VERSION"] = version
             templates[f"VC_LIBRARY_{key.upper()}_FULL"] = f"{group}:{name}:{version}"
 
         for key, value in data["plugins"].items():
             templates[f"VC_PLUGIN_{key.upper()}_ID"] = value["id"]
-            if isinstance(value["version"], str):
-                templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = value["version"]
-            elif "ref" in value["version"]:
-                templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = versions[value["version"]["ref"]]
+            version = value["version"]
+            if "ref" in version:
+                version = version[value["ref"]]
+            templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = version
     print(templates)
-
 
 
 _load_templates()

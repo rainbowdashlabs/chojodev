@@ -152,7 +152,7 @@ plugins {
 }
 
 dependencies {
-    api("de.chojo.sadu", "sadu", "1.4.1")
+    api("de.chojo.sadu", "sadu", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
