@@ -43,7 +43,7 @@ Deshalb hat er seine eigene Version.
 Um diese Version zu aktualisieren, brauchst du nur einen Befehl:
 
 ```shell
-./gradlew wrapper --gradle-version=8.7 --distribution-type=bin
+./gradlew wrapper --gradle-version={{ gradle }} --distribution-type=bin
 ```
 
 Das funktioniert auf Unix-Systemen und auch in der Windows PowerShell oder Git Bash.
@@ -264,8 +264,8 @@ Im Abschnitt `dependencies` können wir zunächst zwei verschiedene Arten von Ab
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    implementation("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -317,7 +317,7 @@ Das heißt, wir können nicht nur die Aufgaben unserer Plugins konfigurieren, so
 ```java
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
     withSourcesJar()
     withJavadocJar()
@@ -452,7 +452,6 @@ Wenn du bereits eine `plugin.yml` erstellt hast, kannst du sie jetzt wieder lös
 Um unsere `plugin.yml` zu erstellen, werden wir das `plugin-yml` [Gradle plugin by minecrell](https://github.com/Minecrell/plugin-yml) verwenden.
 
 ### Importieren
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/net.minecrell.plugin-yml.bukkit?label=Version)
 
 Zuerst müssen wir es importieren. Die aktuellste Version steht oben. 
 
@@ -463,7 +462,7 @@ Zuerst müssen wir es importieren. Die aktuellste Version steht oben.
 
 ```java
 plugins {
-  id("net.minecrell.plugin-yml.bukkit") version "version" // (1)!
+  id("{{ VC_PLUGIN_BUKKITYML_ID }}") version "{{ VC_PLUGIN_BUKKITYML_VERSION }}" // (1)!
 }
 ```
 
@@ -506,8 +505,8 @@ Du erinnerst dich wahrscheinlich daran, dass unser Abschnitt mit den Abhängigke
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    implementation("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -517,8 +516,8 @@ Dazu müssen wir nur `implementation` in `bukkitLibrary` ändern:
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    bukkitLibrary("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    bukkitLibrary("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -540,8 +539,6 @@ Mehr über Paper Plugins findest du [hier](https://docs.papermc.io/paper/referen
 
 ## Abhängigkeiten in unser Jar shaden
 
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.goooler.shadow?label=Version)
-
 Nehmen wir an, SADU befindet sich nicht im Maven Central und wir können den Library Loader nicht verwenden.
 
 In diesem Fall müssen wir ein anderes Plugin namens shadow verwenden. Die aktuellste Version steht oben
@@ -550,18 +547,16 @@ In diesem Fall müssen wir ein anderes Plugin namens shadow verwenden. Die aktue
 
 ```java
 plugins {
-  id("io.github.goooler.shadow") version "version" // (1)!
+  id("{{ VC_PLUGIN_SHADOW_ID }}") version "{{ VC_PLUGIN_SHADOW_VERSION }}"
 }
 ```
-
-1. Ersetze die Version hier durch die Version im Bild oben
 
 Unsere Abhängigkeiten sehen erneut wie folgt aus:
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    bukkitLibrary("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -638,8 +633,6 @@ tasks {
 
 ## NMS und internals mit Paperweight Userdev
 
-![GitHub-Veröffentlichung (mit Filter)](https://img.shields.io/github/v/release/PaperMC/paperweight?label=Latest%20Version)
-
 Ich rate davon ab, nms in irgendeiner Weise zu verwenden, aber wenn du das möchtest, solltest du das `userdev` Plugin von `paperweight` benutzen.
 Damit kannst du in einer Umgebung mit unverschleierten Namen entwickeln.
 Es ist auch die einzige unterstützte Möglichkeit, auf die Interna von `org.bukkit.craftbukkit.v1_XX_RX` zuzugreifen.
@@ -655,7 +648,7 @@ Dafür müssen wir etwas Neues machen und in unserer `settings.gradle.kts` ein P
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        Maven("https://papermc.io/repo/repository/Maven-public/")
+        maven("https://papermc.io/repo/repository/Maven-public/")
     }
 }
 ```
@@ -671,7 +664,7 @@ Jetzt können wir das Plugin in unsere Datei `build.gradle.kts` importieren. Die
 
 ```java
 plugins {
-    id("io.papermc.paperweight.userdev") version "version"
+    id("{{ VC_PLUGIN_USERDEV_ID }}") version "{{ VC_PLUGIN_USERDEV_ID }}"
 }
 ```
 
@@ -684,7 +677,7 @@ Dazu müssen wir die alte Paper `compileOnly`-Dependency entfernen und durch die
 
 ```java
 dependencies {
-    paperweight.paperDevBundle("1.20.1-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("{{ VC_LIBRARY_PAPER_VERSION }}")
 }
 ```
 

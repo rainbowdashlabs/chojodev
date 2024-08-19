@@ -44,7 +44,7 @@ This is why it has its own version.
 To update this version you only need one command:
 
 ```shell
-./gradlew wrapper --gradle-version=8.7 --distribution-type=bin
+./gradlew wrapper --gradle-version={{ gradle }} --distribution-type=bin
 ```
 
 This works on Unix systems as well as in Windows PowerShell or git bash.
@@ -264,8 +264,8 @@ Inside the dependencies section, we can define two different dependency types fo
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    implementation("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -317,7 +317,7 @@ This means that we can not only configure the tasks of our plugins, but also the
 ```java
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(17))
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
     withSourcesJar()
     withJavadocJar()
@@ -444,8 +444,6 @@ tasks {
 
 ## Creating a plugin.yml using a Gradle plugin
 
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/net.minecrell.plugin-yml.bukkit?label=Version)
-
 Now you may or may not have tried this.
 If you have already created a `plugin.yml`, it may have worked and failed otherwise.
 
@@ -464,7 +462,7 @@ First we need to import it. See the latest version above.
 
 ```java
 plugins {
-  id("net.minecrell.plugin-yml.bukkit") version "version" // (1)!
+  id("{{ VC_PLUGIN_BUKKITYML_ID }}") version "{{ VC_PLUGIN_BUKKITYML_VERSION }}" // (1)!
 }
 ```
 
@@ -507,8 +505,8 @@ You probably remember our dependencies section looking like this:
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    implementation("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -518,8 +516,8 @@ All we need to do is change `implementation` to `bukkitLibrary`:
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    bukkitLibrary("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    bukkitLibrary("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -540,8 +538,6 @@ More about Paper plugins can be found [here](https://docs.papermc.io/paper/refer
 
 ## Shading dependencies into our jar
 
-![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.goooler.shadow?label=Version)
-
 Let's assume that SADU is not located in Maven Central, and we cannot use the library loader.
 
 In this case we need to use another plugin called shadow. The latest version is shown above. 
@@ -550,7 +546,7 @@ In this case we need to use another plugin called shadow. The latest version is 
 
 ```java
 plugins {
-  id("io.github.goooler.shadow") version "version" // (1)!
+  id("{{ VC_PLUGIN_SHADOW_ID }}") version "{{ VC_PLUGIN_SHADOW_VERSION }}"
 }
 ```
 
@@ -560,8 +556,8 @@ Our dependencies look like this again:
 
 ```java
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.20.1-R0.1-SNAPSHOT")
-    implementation("de.chojo.sadu", "sadu", "1.3.1")
+    compileOnly("{{ VC_LIBRARY_PAPER_FULL }}")
+    bukkitLibrary("{{ VC_LIBRARY_SADU_GROUP }}", "{{ VC_LIBRARY_SADU_NAME }}", "{{ VC_LIBRARY_SADU_VERSION }}")
 }
 ```
 
@@ -638,8 +634,6 @@ tasks {
 
 ## NMS and internals using the Paperweight Userdev plugin
 
-![GitHub release (with filter)](https://img.shields.io/github/v/release/PaperMC/paperweight?label=Latest%20Version)
-
 I do not encourage using nms in any way, but if you want to, you should use the `userdev` plugin from `paperweight`.
 This allows you to develop against an environment with non-obfuscated names.
 It is also the only supported way of accessing internals in `org.bukkit.craftbukkit.v1_XX_RX`.
@@ -671,7 +665,7 @@ Now we can import the plugin into our `build.gradle.kts` file.
 
 ```java
 plugins {
-    id("io.papermc.paperweight.userdev") version "1.5.5"
+    id("{{ VC_PLUGIN_USERDEV_ID }}") version "{{ VC_PLUGIN_USERDEV_ID }}"
 }
 ```
 
@@ -684,7 +678,7 @@ To do this we need to remove the old Paper compileOnly dependency and replace it
 
 ```java
 dependencies {
-    paperweight.paperDevBundle("1.20.1-R0.1-SNAPSHOT")
+    paperweight.paperDevBundle("{{ VC_LIBRARY_PAPER_VERSION }}")
 }
 ```
 

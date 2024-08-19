@@ -1,6 +1,6 @@
 import os
 import pathlib
-from typing import TextIO
+import tomllib
 
 rootdir = pathlib.Path().absolute().joinpath("templates")
 
@@ -26,6 +26,33 @@ def _load_templates():
         if not file.endswith(".md"):
             continue
         templates[file.replace(".md", "")] = open(rootdir.joinpath(file)).read().strip()
+    with rootdir.parent.joinpath("gradle").joinpath("libs.versions.toml").open("rb") as f:
+        data = tomllib.load(f)
+        print(data)
+        versions = data["versions"]
+        key: str
+        for key, value in data["libraries"].items():
+            group = value["group"]
+            name = value["name"]
+            templates[f"VC_LIBRARY_{key.upper()}_GROUP"] = group
+            templates[f"VC_LIBRARY_{key.upper()}_NAME"] = name
+            templates[f"VC_LIBRARY_{key.upper()}_MODULE"] = f"{group}:{name}"
+            version = None
+            if isinstance(value["version"], str):
+                version = value["version"]
+            elif "ref" in value["version"]:
+                version = versions[value["version"]["ref"]]
+            templates[f"VC_LIBRARY_{key.upper()}_VERSION"] = version
+            templates[f"VC_LIBRARY_{key.upper()}_FULL"] = f"{group}:{name}:{version}"
+
+        for key, value in data["plugins"].items():
+            templates[f"VC_PLUGIN_{key.upper()}_ID"] = value["id"]
+            if isinstance(value["version"], str):
+                templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = value["version"]
+            elif "ref" in value["version"]:
+                templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = versions[value["version"]["ref"]]
+    print(templates)
+
 
 
 _load_templates()
