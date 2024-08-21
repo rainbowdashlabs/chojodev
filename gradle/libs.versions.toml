@@ -9,7 +9,7 @@ jackson = "2.17.2"
 commons-math3 = { group = "org.apache.commons", name = "commons-math3", version.ref = "commons-math3" }
 guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
 paper = { group = "io.papermc.paper", name = "paper-api", version = "1.21.1-R0.1-SNAPSHOT" }
-sadu = { group = "de.chojo.sadu", name = "sadu", version = "2.2.4" }
+sadu = { group = "de.chojo.sadu", name = "sadu", version = "2.2.5" }
 jacksonbukkit = { group = "de.eldoria.jacksonbukkit", name = "jackson-bukkit", version.ref = "jacksonbukkit" }
 jacksonbukkit_bukkit = { group = "de.eldoria.jacksonbukkit", name = "bukkit", version.ref = "jacksonbukkit" }
 jacksonbukkit_paper = { group = "de.eldoria.jacksonbukkit", name = "paper", version.ref = "jacksonbukkit" }
