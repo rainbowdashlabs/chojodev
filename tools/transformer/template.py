@@ -49,7 +49,6 @@ def _load_templates():
             if "ref" in version:
                 version = version[value["ref"]]
             templates[f"VC_PLUGIN_{key.upper()}_VERSION"] = version
-    print(templates)
 
 
 _load_templates()
