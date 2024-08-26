@@ -16,6 +16,7 @@ plugins:
       post_date_format: medium
       post_url_date_format: yyyy/MM/dd
       post_url_format: "{date}/{slug}"
+      pagination_per_page: 20
   - rss:
       match_path: blog/posts/.*
       abstract_chars_count: -1  # -1 for full content
