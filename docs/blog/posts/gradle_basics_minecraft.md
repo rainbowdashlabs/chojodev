@@ -272,6 +272,7 @@ tasks {
 
     From 1.21 onwards paper uses a non obfuscated jar.
     If your plugin only runs on paper, you no longer need to reobfuscate your jar.
+    Have a look at the paper [documentation](https://docs.papermc.io/paper/dev/userdev#compiling-to-mojang-mappings), since some additional stuff is required to run mojang mapped plugins    
 
 
 And that's it.
