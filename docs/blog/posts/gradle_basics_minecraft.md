@@ -147,10 +147,10 @@ Libraries not located at Maven Central still need to be [shadowed](gradle_basics
 #### Paper plugins
 
 Paper plugins are a type of plugin exclusively for Paper servers.
-They are quite now and some things might be different from what you know.
-They don't share the command system with spigot but use the Brigadier system, that Minecraft itself uses. Usually people use a command system like [Cloud](https://cloud.incendo.org/minecraft/paper/) or [ACF](https://github.com/aikar/commands).
-They also require a new configuration framework, since file configurations and ConfigurationSerializable are no longer available.
-So the learning curve might be a bit steeper for beginners since your probably start with a bunch of new frameworks right from the start.
+They are quite new and some things might be different from what you know.
+They don't share the command system with spigot but use the Brigadier system, that Minecraft itself uses. Usually people use a command system like [Cloud](https://cloud.incendo.org/minecraft/paper/) or [ACF](https://github.com/aikar/commands), which wraps around Brigadier and maker it easier to use.
+They also require a new configuration framework, since file configurations and ConfigurationSerializable are no longer available. I developed [jackson bukkit](jackson_bukkit.md) for that.
+So the learning curve might be a bit steeper for beginners since you probably start with a bunch of new frameworks right from the start. But if you are very new to this and are just starting with minecraft and are just targeting newer paper server, this might be an interesting starting point.
 
 In Paper plugins you can also load dependencies from custom repositories. You can read more about this [here](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
 

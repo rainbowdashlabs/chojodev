@@ -56,10 +56,40 @@ tasks {
     build {
         dependsOn(shadowJar)
     }
+    
+    shadowJar {
+        mergeServiceFiles()
+    }
 }
 ```
 
-#### Relocation
+Additionally, we want to merge service files.
+
+### Service files
+
+If you have dependencies that provide services (which a lot actually do) You should add `mergeServiceFiles()` to your `shadowJar` task configuration. This makes shadow to merge all service files of all your dependencies together.
+
+```java
+tasks {
+    shadowJar {
+        mergeServiceFiles()
+    }
+}
+```
+
+### Minimize
+
+If you have a very large jar because you have a lot of dependencies, it might be beneficial to minimize your jar. This will remove any uncalled class of your dependencies. But be aware that this will not detect classes loaded via reflections, e.g. database drivers.
+
+```java
+tasks {
+    shadowJar {
+        minimize()
+    }
+}
+```
+
+### Relocation
 
 !!! warn
 
@@ -94,6 +124,19 @@ The path to relocate is usually the group id of the dependency you want to reloc
 Beware that dependencies may have own dependencies that are shaded as well.
 Those dependencies might have other group ids that require explicit relocation.
 
+## Bundling applications
+
+If your application is not a plugin, and you want to run your jar via `java -jar` you additionally need to define a main class. You can do that easily in the shadowJar task as well.
+
+```java
+tasks {
+    shadowJar {
+        manifest {
+            attributes(mapOf("Main-Class" to "dev.chojo.myapp.Main"))
+        }
+    }
+}
+```
 
 <details>
 <summary>Checkpoint</summary>
@@ -128,16 +171,21 @@ tasks {
     }
     
     shadowJar {
+        mergeServiceFiles()
+        // minimize()
         val mapping = mapOf("de.chojo.sadu" to "sadu")
         val base = "dev.chojo.myapp.libs."
         for ((pattern, name) in mapping) relocate(pattern, "${base}${name}")
+        // If you have a main class, relocation is most probably not necessary since your application is most probably standalone
+        manifest {
+            attributes(mapOf("Main-Class" to "dev.chojo.myapp.Main"))
+        }
     }
 }
 
 ```
 
 </details>
-
 
 ## Thank you!
 
