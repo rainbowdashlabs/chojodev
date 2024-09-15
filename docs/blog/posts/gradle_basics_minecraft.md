@@ -236,7 +236,7 @@ Now we can import the plugin into our `build.gradle.kts` file.
 
 ```java
 plugins {
-    id("{{ VC_PLUGIN_USERDEV_ID }}") version "{{ VC_PLUGIN_USERDEV_ID }}"
+    id("{{ VC_PLUGIN_USERDEV_ID }}") version "{{ VC_PLUGIN_USERDEV_VERSION }}"
 }
 ```
 
