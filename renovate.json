@@ -5,10 +5,12 @@
   ],
   "gradle": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "ignoreTests": true
   },
   "gradle-wrapper": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "ignoreTests": true
   }
 }
