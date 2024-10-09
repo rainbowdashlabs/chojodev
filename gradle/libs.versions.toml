@@ -17,7 +17,7 @@ eldoutil = { group = "de.eldoria.util", name = "eldo-util", version.ref = "eldou
 jackson_yaml = { group = "com.fasterxml.jackson.dataformat", name = "jackson-dataformat-yaml", version.ref = "jackson" }
 
 [plugins]
-jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.22" }
+jvm = { id = "org.jetbrains.kotlin.jvm", version = "1.9.25" }
 bukkityml = { id = "net.minecrell.plugin-yml.bukkit", version = "0.6.0" }
 paperyml = { id = "net.minecrell.plugin-yml.paper", version = "0.6.0" }
 shadow = { id = "com.gradleup.shadow", version = "8.3.1" }
