@@ -3,5 +3,12 @@
   "extends": [
     "config:recommended"
   ],
-  "automerge": true
+  "gradle": {
+    "enabled": true,
+    "automerge": true
+  },
+  "gradle-wrapper": {
+    "enabled": true,
+    "automerge": true
+  }
 }
