@@ -340,7 +340,7 @@ If a dependency happens to not be located in the Maven Central repository or you
 
 ```java
 repositories {
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 ```
 This will import the `paper-mc` repository. Of course, you can do the same with any other repository.
@@ -529,7 +529,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     // External repository
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
