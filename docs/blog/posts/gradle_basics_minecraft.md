@@ -87,7 +87,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     // External repository
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
@@ -172,7 +172,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     // External repository
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
@@ -220,7 +220,7 @@ For this we need to do something new and go into our `settings.gradle.kts` to ad
 pluginManagement {
     repositories {
         gradlePluginPortal()
-        maven("https://papermc.io/repo/repository/maven-public/")
+        maven("https://repo.papermc.io/repository/maven-public/")
     }
 }
 ```
@@ -295,7 +295,7 @@ version = "1.0.0-SNAPSHOT"
 repositories {
     mavenCentral()
     // External repository
-    maven("https://papermc.io/repo/repository/maven-public/")
+    maven("https://repo.papermc.io/repository/maven-public/")
 }
 
 dependencies {
