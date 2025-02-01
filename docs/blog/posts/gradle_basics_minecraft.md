@@ -23,7 +23,7 @@ This post assumes you have a build file similar to the one we had at the end of 
 If you followed only the last blog post, you might not have a plugin.yml yet.
 If you already have a `plugin.yml` you can delete it now or wait until the end of this section.
 
-To create our `plugin.yml` we will use the `plugin-yml` [Gradle plugin by minecrell](https://github.com/Minecrell/plugin-yml).
+To create our `plugin.yml` we will use the `plugin-yml` [Gradle plugin](https://github.com/eldoriarpg/plugin-yml).
 
 ### Importing
 
@@ -67,7 +67,7 @@ What are we doing here?
    See my previous [blog post](minecraft_main_class.md).
 3. We will register a command called `test` with the alias `command`.
 
-Have a look at the [GitHub page](https://github.com/Minecrell/plugin-yml#bukkit) for further references.
+Have a look at the [GitHub page](https://github.com/eldoriarpg/plugin-yml/wiki/bukkit) for further references.
 
 The version is taken from your project version by default.
 
@@ -152,7 +152,7 @@ They don't share the command system with spigot but use the Brigadier system, th
 They also require a new configuration framework, since file configurations and ConfigurationSerializable are no longer available. I developed [jackson bukkit](jackson_bukkit.md) for that.
 So the learning curve might be a bit steeper for beginners since you probably start with a bunch of new frameworks right from the start. But if you are very new to this and are just starting with minecraft and are just targeting newer paper server, this might be an interesting starting point.
 
-In Paper plugins you can also load dependencies from custom repositories. You can read more about this [here](https://github.com/Minecrell/plugin-yml#plugin-libraries-json).
+In Paper plugins you can also load dependencies from custom repositories. You can read more about this [here](https://github.com/eldoriarpg/plugin-yml/wiki/Plugin-Libraries-JSON).
 
 More about Paper plugins can be found [here](https://docs.papermc.io/paper/reference/paper-plugins) and [here](https://docs.papermc.io/paper/dev/getting-started/paper-plugins).
 
