@@ -16,7 +16,7 @@ RUN find docs/ -type f -print0 | xargs -0 sed -i 's/⯪/:material-star-half-full
 RUN find docs/ -type f -print0 | xargs -0 sed -i 's/☆/:material-star-outline:/g'
 RUN find docs/ -type f -print0 | xargs -0 sed -i 's/```kts/```js/g'
 RUN find docs/ -type f -print0 | xargs -0 sed -i 's/```kt/```js/g'
-RUN grep "distributionUrl" gradle/wrapper/gradle-wrapper.properties | grep -oP 'gradle-\K.*(?=-bin.zip)' > templates/gradle.md
+RUN grep "distributionUrl" code/minecraft_gradle/gradle/wrapper/gradle-wrapper.properties | grep -oP 'gradle-\K.*(?=-bin.zip)' > templates/gradle.md
 RUN pipenv run python tools/build.py
 
 RUN pipenv run mkdocs build -f mkdocs.yml

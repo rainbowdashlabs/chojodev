@@ -8,7 +8,6 @@ WORKDIR /docs
 
 COPY mkdocs.yml mkdocs.yml
 
-
 COPY .git/ .git/
 
 COPY tools tools
@@ -20,7 +19,7 @@ RUN pipenv sync
 
 COPY docs/ docs/
 
-COPY gradle gradle
+COPY code/minecraft_gradle/gradle gradle
 
 RUN pipenv run python tools/build.py
 
