@@ -1,6 +1,6 @@
 [versions]
 commons-math3 = "3.6.1"
-guava = "33.4.7-android"
+guava = "33.4.7-jre"
 jacksonbukkit = "1.2.0"
 eldoutil = "2.1.10"
 jackson = "2.18.3"
