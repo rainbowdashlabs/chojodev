@@ -1,0 +1,27 @@
+[versions]
+commons-math3 = "3.6.1"
+guava = "33.4.8-jre"
+jacksonbukkit = "1.2.0"
+eldoutil = "2.1.11"
+jackson = "2.19.2"
+
+[libraries]
+commons-math3 = { group = "org.apache.commons", name = "commons-math3", version.ref = "commons-math3" }
+guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
+paper = { group = "io.papermc.paper", name = "paper-api", version = "1.21.1-R0.1-SNAPSHOT" }
+sadu = { group = "de.chojo.sadu", name = "sadu", version = "2.3.2" }
+ocular = { group = "dev.chojo", name = "ocular", version = "1.0.2" }
+jacksonbukkit = { group = "de.eldoria.jacksonbukkit", name = "jackson-bukkit", version.ref = "jacksonbukkit" }
+jacksonbukkit_bukkit = { group = "de.eldoria.jacksonbukkit", name = "bukkit", version.ref = "jacksonbukkit" }
+jacksonbukkit_paper = { group = "de.eldoria.jacksonbukkit", name = "paper", version.ref = "jacksonbukkit" }
+eldoutil = { group = "de.eldoria.util", name = "eldo-util", version.ref = "eldoutil" }
+jackson_yaml = { group = "com.fasterxml.jackson.dataformat", name = "jackson-dataformat-yaml", version.ref = "jackson" }
+
+[plugins]
+jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.2.0" }
+bukkityml = { id = "de.eldoria.plugin-yml.bukkit", version = "0.7.1" }
+paperyml = { id = "de.eldoria.plugin-yml.paper", version = "0.7.1" }
+bungeeyml = { id = "de.eldoria.plugin-yml.bungee", version = "0.7.1" }
+nukkityml = { id = "de.eldoria.plugin-yml.nukkit", version = "0.7.1" }
+shadow = { id = "com.gradleup.shadow", version = "8.3.8" }
+userdev = { id = "io.papermc.paperweight.userdev", version = "1.7.7" }

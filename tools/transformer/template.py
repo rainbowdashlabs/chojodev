@@ -26,7 +26,7 @@ def _load_templates():
         if not file.endswith(".md"):
             continue
         templates[file.replace(".md", "")] = open(rootdir.joinpath(file)).read().strip()
-    with rootdir.parent.joinpath("gradle").joinpath("libs.versions.toml").open("rb") as f:
+    with rootdir.parent.joinpath("code").joinpath("gradle_multimodule").joinpath("gradle").joinpath("libs.versions.toml").open("rb") as f:
         data = tomllib.load(f)
         print(data)
         versions = data["versions"]
