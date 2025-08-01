@@ -2,7 +2,7 @@
 
 You probably came here to learn something about me. Well lets start it!
 
-You often find me using the names Chojo, Hadde or Lilly when I am somewhere around in the internet (Except on GitHub for no reason).
+You often find me using the names Chojo or Nora when I am somewhere around in the internet (Except on GitHub for no reason).
 I am passionate about Java and SQL (yes...).
 Also like nearly everyone I want to do more stuff than I have time left.
 I mainly work on minecraft plugins published under my [Eldoria](https://github.com/eldoriarpg) organisation. 
