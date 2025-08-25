@@ -21,7 +21,7 @@ jackson_yaml = { group = "com.fasterxml.jackson.dataformat", name = "jackson-dat
 jvm = { id = "org.jetbrains.kotlin.jvm", version = "2.2.10" }
 bukkityml = { id = "de.eldoria.plugin-yml.bukkit", version = "0.8.0" }
 paperyml = { id = "de.eldoria.plugin-yml.paper", version = "0.7.1" }
-bungeeyml = { id = "de.eldoria.plugin-yml.bungee", version = "0.7.1" }
+bungeeyml = { id = "de.eldoria.plugin-yml.bungee", version = "0.8.0" }
 nukkityml = { id = "de.eldoria.plugin-yml.nukkit", version = "0.7.1" }
 shadow = { id = "com.gradleup.shadow", version = "9.0.2" }
 userdev = { id = "io.papermc.paperweight.userdev", version = "1.7.7" }
