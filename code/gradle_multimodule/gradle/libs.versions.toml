@@ -23,5 +23,5 @@ bukkityml = { id = "de.eldoria.plugin-yml.bukkit", version = "0.8.0" }
 paperyml = { id = "de.eldoria.plugin-yml.paper", version = "0.8.0" }
 bungeeyml = { id = "de.eldoria.plugin-yml.bungee", version = "0.8.0" }
 nukkityml = { id = "de.eldoria.plugin-yml.nukkit", version = "0.8.0" }
-shadow = { id = "com.gradleup.shadow", version = "9.2.2" }
+shadow = { id = "com.gradleup.shadow", version = "9.3.0" }
 userdev = { id = "io.papermc.paperweight.userdev", version = "1.7.7" }
