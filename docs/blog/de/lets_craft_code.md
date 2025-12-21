@@ -24,15 +24,16 @@ Vor allem haben wir darauf geachtet, dass du mitkommst, die Beispiele nicht zu s
 
 Es mag jetzt natürlich super biased sein, wenn jemand, der am Buch selbst mitgearbeitet hat, eine Rezension schreibt, aber wer, wenn nicht ich, hat vermutlich den besten Block von außen?
 
-Max ist es gelungen mit dem Buch "Let's Craft Code" ein Buch zu schreiben, dass ich wirklich guten Gewissens auch Anfängern and Herz legen kann.
+Max ist es gelungen, mit dem Buch "Let's Craft Code" ein Buch zu schreiben, dass ich wirklich guten Gewissens auch Anfängern and Herz legen kann.
 Mein größtes Problem mit Programmierbüchern ist nahezu immer die endlose Erklärung mit Beispielen, bei denen ich zwar am Ende einen Haufen Code habe, aber wirklich etwas sehen tue ich nicht abgesehen von einer Konsolenausgabe.
 
 Mit Minecraft hat hier Max vermutlich wirklich die beste Platform gefunden den geschriebenen Code sichtbar zu machen. Wir können ihn zwar immer noch nicht anfassen, aber sehen funktioniert wirklich wunderbar.
-So gibt es nicht nur zu jedem Konzept ein Code Beispiel, sondern auch Praxisbeispiele und zwei Große Parts mit komplexeren Beispielen, die schon fast vollständig funktionale Plugins darstellen.
 
-Java erschlägt einen super gerne mit vielen Dingen. Es ist nun mal eine komplexe Sprache, die einfach grenzenlose Möglichkeiten eröffnet.
+Nun aber mal zu dem Inhalt selbst. Java erschlägt einen super gerne mit vielen Dingen. Es ist nun mal eine komplexe Sprache, die einfach grenzenlose Möglichkeiten eröffnet.
 Max hat es hier aber geschafft, eine wirklich sinnvolle Reihenfolge zu finden und die Konzepte anschaulich an praktischen Beispielen zu demonstrieren. Natürlich wird von Anfang an nicht alles erklärt. Aber genau das hält die Komplexität erstmal gering und wir können uns auf kleinere Abschnitte konzentrieren, die wir verändern und anpassen für das, was wir erreichen wollen.
 Stück für Stück kommt so mehr Sinn in unseren Code und wir verstehen immer mehr der Bezeichnungen, die wir bisher lediglich verwendet haben, ohne sie zu verstehen.
+Zur besseren Verinnerlichung gibt es nicht nur zu jedem Konzept ein Code Beispiel, sondern auch Praxisbeispiele und zwei Große Parts mit komplexeren Beispielen, die schon fast vollständig funktionale Plugins darstellen.
+Den ganzen Code musst du natürlich auch nicht abtippen. Alles ist in einem GitHub Repo verfügbar. Solltest du doch einmal feststecken, kannst du dich jederzeit in Discord melden.
 
 Ziel des Buches ist es aber natürlich nicht, aus dir einen professionellen Entwickler zu machen, der morgen bereits anfangen kann zu arbeiten. Es ersetzt natürlich auch kein Studium. Auch wird es dir nicht alle Funktionen erklären, die Java zu bieten hat.
 Aber das ist auch gar nicht das Ziel des Buches. Es gibt dir die Werkzeuge in die Hand, dich selbst weiterzuentwickeln. Es führt dich in eine Welt ein, die so grenzenlos ist wie die Welt von Minecraft.
