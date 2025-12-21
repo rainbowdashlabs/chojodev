@@ -12,13 +12,15 @@ categories:
 
 !!! note
 
-    Sorry ppl. Thats a review for a german book, so no english here.
+    Sorry guys and gals. That's a review for a german book, so no english here.
 
 Keine Sorge, dieser Blog bleibt weiterhin technisch und wird nicht zum Buchblog, aber diesem Buch würde ich hier gern etwas Aufmerksamkeit widmen.
 
 > Oh nein, noch ein Buch, das Programmieren beibringt. Das ist bestimmt wieder super trocken und ich verliere die Motivation.
 
 Wenn du das denkst, könnte dieses Buch jedoch genau das richtige sein.
+
+<!-- more -->
 
 Wenn das nicht das erste Mal auf meinem Blog ist, weißt du, wer ich bin.
 Ich bin Nora und dieses Buch kenne ich vermutlich fast genauso gut, wie der Author selbst. 
@@ -52,6 +54,6 @@ Ich freue mich auf jeden Fall, dass wir endlich ein Buch haben, dass ich wirklic
 Neugierig geworden? Das Buch ist im Rheinwerk verlag erschienen und in nahezu jedem Buchladen erhältlich und natürlich auch als E-Book.
 Die physische Printversion ist aber auch schön anzusehen.
 
-Weitere Infos gibts hier:
-https://www.rheinwerk-verlag.de/lets-craft-code-wie-du-deine-minecraft-welt-mit-plugins-erweiterst/
+[Weitere Infos gibts hier](https://www.rheinwerk-verlag.de/lets-craft-code-wie-du-deine-minecraft-welt-mit-plugins-erweiterst/
+)
 
