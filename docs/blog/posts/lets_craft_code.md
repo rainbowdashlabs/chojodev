@@ -10,6 +10,10 @@ categories:
 
 # Let's Craft Code - Eine Buchrezension
 
+!!! note
+
+    Sorry ppl. Thats a review for a german book, so no english here.
+
 Keine Sorge, dieser Blog bleibt weiterhin technisch und wird nicht zum Buchblog, aber diesem Buch würde ich hier gern etwas Aufmerksamkeit widmen.
 
 > Oh nein, noch ein Buch, das Programmieren beibringt. Das ist bestimmt wieder super trocken und ich verliere die Motivation.
