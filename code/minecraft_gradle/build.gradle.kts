@@ -15,7 +15,7 @@ dependencies {
     // We are not responsible to provide the classes from this dependency
     compileOnly("io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT")
     // We are responsible for providing the classes from this dependency
-    implementation("de.chojo.sadu", "sadu", "2.3.4")
+    implementation("de.chojo.sadu", "sadu", "2.3.5")
 }
 
 java {
