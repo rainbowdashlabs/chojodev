@@ -13,7 +13,7 @@ repositories {
 
 dependencies {
     // We are not responsible to provide the classes from this dependency
-    compileOnly("io.papermc.paper:paper-api:26.2.build.96-stable")
+    compileOnly("io.papermc.paper:paper-api:26.2.build.98-stable")
     // We are responsible for providing the classes from this dependency
     implementation("de.chojo.sadu", "sadu", "2.3.9")
 }
